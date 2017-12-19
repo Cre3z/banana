@@ -397,4 +397,10 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function(){
+        $('.nav li').removeClass('active');
+        $('#dash').addClass('active');
+    });
+</script>
 @endsection
