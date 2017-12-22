@@ -53,9 +53,10 @@
                         <p class="category">All guests guests, invited, pending and RSVP.</p>
                     </div>
                     <div class="card-content table-responsive">
-                        <div id="toolbar">
-                            <a href="/guests_add" class="btn btn-primary">+ Invite Guest</a>
+                        <div id="">
+                            <a href="/guests_add" class="btn btn-primary floatRight">+ Invite Guest</a>
                         </div>
+                        <div class="clearfix"></div>
                         <table data-pagination="true" data-search="true" data-toggle="table" data-url="/guests_all_json" class="table" data-toolbar="#toolbar">
                             <thead class="text-primary">
                                 <tr>

@@ -16,11 +16,6 @@
                     <div class="desc">
                         <h2>Louie Jie L. Mahusay</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda vero totam eum, necessitatibus reprehenderit nisi, ratione neque aspernatur sapiente minus? Omnis neque labore distinctio aspernatur esse impedit laboriosam, veritatis dolorem!</p>
-                        <ul class="social social-circle">
-                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                            <li><a href="#"><i class="icon-facebook"></i></a></li>
-                            <li><a href="#"><i class="icon-instagram"></i></a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -30,11 +25,6 @@
                     <div class="desc">
                         <h2>Marializa R. Tabay</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda vero totam eum, necessitatibus reprehenderit nisi, ratione neque aspernatur sapiente minus? Omnis neque labore distinctio aspernatur esse impedit laboriosam, veritatis dolorem!</p>
-                        <ul class="social social-circle">
-                            <li><a href="#"><i class="icon-twitter"></i></a></li>
-                            <li><a href="#"><i class="icon-facebook"></i></a></li>
-                            <li><a href="#"><i class="icon-instagram"></i></a></li>
-                        </ul>
                     </div>
                 </div>
             </div>

@@ -4,9 +4,9 @@
         <div class="container">
             <div class="row animate-box">
                 <div class="col-md-12 section-heading text-center svg-sm colored">
-                    <img src="/website/images/flaticon/svg/006-flower-bell-outline-design-variant-with-vines-and-leaves.svg" class="svg" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
+                    <img src="/website/images/flaticon/svg/006-flower-bell-outline-design-variant-with-vines-and-leaves.svg" class="svg" alt="">
                     <h2 class="">The Wedding Day</h2>
-                    <span class="datewed">Saturday, Dec. 2, 2017</span>
+                    <span class="datewed">Saterdag, Dec. 15, 2018</span>
                 </div>
             </div>
             <div class="row animate-box">

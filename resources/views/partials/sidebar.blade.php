@@ -6,7 +6,9 @@
     -->
             <div class="logo">
                 <a href="#" class="simple-text">
-                    Suzaan
+                    @if (Auth::check())
+                    {{ Auth::user()->name }}
+                    @endif
                 </a>
             </div>
             <div class="sidebar-wrapper">

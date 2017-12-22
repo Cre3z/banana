@@ -1,0 +1,8 @@
+.white {
+ color: white;
+}
+
+.btn {
+    white-space: inherit;
+    margin-bottom: 10px;
+}

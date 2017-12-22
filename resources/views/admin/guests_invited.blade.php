@@ -53,17 +53,22 @@
                         <p class="category">All guests that you are considering to invite.</p>
                     </div>
                     <div class="card-content table-responsive">
+                        <div id="">
+                            <a href="/guests_add" class="btn btn-primary floatRight">+ Invite Guest</a>
+                        </div>
+                        <div class="clearfix"></div>
                         <div id="toolbar">
-                            <a href="/guests_add" class="btn btn-primary">+ Invite Guest</a>
+                            <a href="#" class="btn btn-warning send"><i class="material-icons">mail</i>  Send Email Invites</a>
+                            <p>Note: Plus one's will not receive an email.</p>
                         </div>
                         <table data-pagination="true" data-search="true" data-toggle="table" data-url="/guests_invited_json" class="table" data-toolbar="#toolbar">
                             <thead class="text-primary">
                                 <tr>
+                                    <th data-checkbox="true" data-field="id">ID</th>
                                     <th data-sortable="true" data-field="name">Name</th>
                                     <th data-field="cell">Cell</th>
                                     <th data-sortable="true" data-field="email">Email</th>
-                                    <th data-sortable="true" data-field="plusone">Plus One</th>
-                                    <th data-field="action">Action</th>
+                                    <th data-sortable="true" data-field="plus_one">Plus One</th>
                                 </tr>
                             </thead>
                         </table>

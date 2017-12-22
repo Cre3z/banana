@@ -6,7 +6,7 @@
                     <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
                     <h2>Are Getting Married</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, sequi, minima repellendus explicabo magni aperiam, ducimus perferendis ad quidem suscipit omnis unde veritatis pariatur. Commodi, nisi. Iusto, accusantium a.</p>
-                    <p><strong>on Dec 28, 2017 &mdash; Boracay, Philippines</strong></p>
+                    <p><strong>on Dec 15, 2018 &mdash; Boracay, Philippines</strong></p>
                 </div>
             </div>
         </div>

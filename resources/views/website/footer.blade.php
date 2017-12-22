@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p class="copyright text-center">&copy; 2018 <a href="index.html">Suzaan & Jovan</a>. All Rights Reserved. Created by <a href="http://crezell.co.za" target="_blank">Cre3z</a></p>
+                <p class="copyright text-center">&copy; 2018 <a href="index.html">Suzaan & Jovan</a>. All Rights Reserved. Maintained by <a href="http://crezell.co.za" target="_blank">Cre3z</a></p>
             </div>
         </div>
 <!--

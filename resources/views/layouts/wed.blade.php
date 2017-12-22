@@ -30,6 +30,7 @@
     <div class="wrapper">
         
         @include('partials.sidebar')
+        @include('modals.send_emails')
         
         <div class="main-panel">
             @yield('content')
@@ -54,6 +55,7 @@
 <script src="/admin/js/material-dashboard.js?v=1.2.0"></script>
 <!-- Material Dashboard DEMO methods, don't include it in your project! -->
 <script src="/admin/js/demo.js"></script>
+<script src="/admin/js/admin.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
 

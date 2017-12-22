@@ -39,6 +39,7 @@
 	<link rel="stylesheet" href="/website/css/bootstrap.css">
 	
 	<link rel="stylesheet" href="/website/css/style.css">
+	<link rel="stylesheet" href="/website/css/admin.css">
 
 	<!-- Modernizr JS -->
 	<script src="/website/js/modernizr-2.6.2.min.js"></script>

@@ -5,3 +5,47 @@
 hr {
     border-top: 1px solid #ddd;
 }
+
+body {
+    background-color: #eee;
+}
+
+#app {
+    margin-top: 5%;
+}
+
+.mt-70 {
+    margin-top: 70px;
+}
+
+.floatRight {
+    float: right;
+}
+
+.row.overlay {
+    height: 100%;
+    background-color: #6725e4a1;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    display: none;
+}
+
+.row.overlay > div {
+    margin-top: 10%;
+}
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
