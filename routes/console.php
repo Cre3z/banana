@@ -19,5 +19,22 @@ Artisan::command('inspire', function () {
 
 
 Artisan::command('sendmails', function() {
-    echo "SENDING MAILS YO";
+    // our timerange is an hour ago from now.
+    $start  = time() - 3600;
+    $end    = time();
+    $emails = \App\Email::where('timetosend', '>=', $start)->where('timetosend', '<=', $end)->get();
+
+    // Now we get all the guests
+    $guests = \App\Guest::all();
+    foreach($guests AS $guest) {
+        $gEmail     = $guest->email;
+        $gName      = $guest->name;
+        $gSurname   = $guest->surname;
+        foreach($emails AS $email) {
+            $body   = $email->body;
+            // SEND MAIL HERE
+            echo "Mail send to: ({$gName} {$gSurname}) {$gEmail} \n";
+        }
+    }
+
 });
