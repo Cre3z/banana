@@ -101,4 +101,9 @@ class EmailScheduler extends Controller
     {
         //
     }
+    
+    public function delete(Request $request){
+        
+        $check = Email::where('_id', $request->get('id'))->delete();
+    }
 }

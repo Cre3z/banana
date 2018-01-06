@@ -1,7 +1,7 @@
 @extends('layouts.wed')
 @section('content')
-
-<div class="content">
+@include('partials.hamburger')
+<div class="content mt-70">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">

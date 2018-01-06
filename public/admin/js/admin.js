@@ -30,7 +30,7 @@ $(document).ready(function(){
             $.each(data, function(key, value){ 
                 count++;
                 if(value.email != null){
-                    $('.text_name').text(value.name);
+//                    $('.text_name').text(value.name);
                     $.ajax({
                       url: "/deactivate",
                       data: {email: value.email},
@@ -39,6 +39,27 @@ $(document).ready(function(){
                     });
                 }
                 if(count == data.length){$('.row.overlay').hide(); $('#users_tbl').bootstrapTable('refresh');}
+            });
+        }
+    });
+    
+    $('a.delete_emails').on('click', function(){ 
+        var data = $('#emails_tbl').bootstrapTable('getSelections');
+        if(data.length != 0){
+            $('.row.overlay').show(); 
+            var count = 0;
+            $.each(data, function(key, value){ 
+                count++;
+                if(value._id != null){
+//                    $('.text_name').text(value.name);
+                    $.ajax({
+                      url: "/remove-email",
+                      data: {id: value._id},
+                      method: 'post',
+                      success: function(data){console.log(data);}
+                    });
+                }
+                if(count == data.length){$('.row.overlay').hide(); $('#emails_tbl').bootstrapTable('refresh');}
             });
         }
     });

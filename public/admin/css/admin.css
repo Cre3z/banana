@@ -55,3 +55,7 @@ body {
     width: 100%;
     bottom: 10px;
 }
+
+table tr:hover {
+    cursor: pointer;
+}

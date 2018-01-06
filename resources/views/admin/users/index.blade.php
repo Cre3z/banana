@@ -4,6 +4,12 @@
     <nav class="navbar navbar-transparent navbar-absolute">
         <div class="container-fluid">
             <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="/email-scheduler"> User Management </a>
             </div>
         </div>
@@ -23,7 +29,7 @@
                                 <a href="/add-user" class="btn btn-primary floatRight">+ Add User</a>
                             </div>
                             <div id="toolbar">
-                                <a href="#" class="btn btn-warning floatRight deactivate">Deactivate Users</a>
+                                <a href="#" class="btn btn-warning floatRight deactivate"><i class="material-icons">delete_forever</i> Deactivate Users</a>
                             </div>
                             <div class="clearfix"></div>
                             <table data-pagination="true" data-search="true" data-toggle="table" data-url="/users_json" class="table" data-toolbar="#toolbar" id="users_tbl">

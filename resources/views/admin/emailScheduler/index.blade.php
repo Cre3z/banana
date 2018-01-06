@@ -4,6 +4,12 @@
     <nav class="navbar navbar-transparent navbar-absolute">
         <div class="container-fluid">
             <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
                 <a class="navbar-brand" href="/email-scheduler"> Email Scheduler </a>
             </div>
         </div>
@@ -22,10 +28,14 @@
                             <div id="">
                                 <a href="/add-email" class="btn btn-primary floatRight">+ Add Email</a>
                             </div>
+                            <div id="toolbar">
+                                <a href="#" class="btn btn-warning floatRight delete_emails"><i class="material-icons">delete_forever</i> Delete Emails</a>
+                            </div>
                             <div class="clearfix"></div>
-                            <table data-pagination="true" data-search="true" data-toggle="table" data-url="/emails" class="table" data-toolbar="#toolbar">
+                            <table data-pagination="true" data-search="true" data-toggle="table" data-url="/emails" class="table" data-toolbar="#toolbar" id="emails_tbl">
                                 <thead class="text-primary">
                                 <tr>
+                                    <th data-checkbox="true" data-field="id">#</th>
                                     <th data-sortable="true" data-field="name">Name</th>
                                     <th data-field="subject">Subject</th>
                                     <th data-sortable="true" data-field="date">Date</th>

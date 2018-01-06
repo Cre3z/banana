@@ -37,6 +37,7 @@ Route::group(['middleware' => 'admin'], function() {
     Route::get('/email-scheduler',  'EmailScheduler@indexView');
     Route::get('/add-email',      'EmailScheduler@addView');
     Route::post('/add-email',      'EmailScheduler@create');
+    Route::post('/remove-email',      'EmailScheduler@delete');
     Route::resource('/emails',      'EmailScheduler');
     
     Route::get('/users',  'UserController@index');
