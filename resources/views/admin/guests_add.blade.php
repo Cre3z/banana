@@ -40,13 +40,13 @@
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">First Name</label>
-                            <input type="text" class="form-control" name="name">
+                            <input type="text" class="form-control" name="name" required>
                         <span class="material-input"></span></div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">Last Name</label>
-                            <input type="text" class="form-control" name="surname">
+                            <input type="text" class="form-control" name="surname" required>
                         <span class="material-input"></span></div>
                     </div>
                 </div>
@@ -54,13 +54,13 @@
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">Cell Number</label>
-                            <input type="number" class="form-control" name="cell">
+                            <input type="number" class="form-control" name="cell" required>
                         <span class="material-input"></span></div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">Email Address</label>
-                            <input type="email" class="form-control" name="email">
+                            <input type="email" class="form-control" name="email" required>
                         <span class="material-input"></span></div>
                     </div>
                 </div>
@@ -116,7 +116,7 @@
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">Name One</label>
-                            <input type="text" class="form-control" name="name[]">
+                            <input type="text" class="form-control" name="name[]" required>
                         <span class="material-input"></span></div>
                     </div>
                     <div class="col-md-6">
@@ -130,7 +130,7 @@
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">Name Two</label>
-                            <input type="text" class="form-control" name="surname[]">
+                            <input type="text" class="form-control" name="surname[]" required>
                         <span class="material-input"></span></div>
                     </div>
                     <div class="col-md-6">
@@ -144,13 +144,13 @@
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">Cell Number</label>
-                            <input type="number" class="form-control" name="cell">
+                            <input type="number" class="form-control" name="cell" required>
                         <span class="material-input"></span></div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">Email Address</label>
-                            <input type="email" class="form-control" name="email">
+                            <input type="email" class="form-control" name="email" required>
                         <span class="material-input"></span></div>
                     </div>
                 </div>
@@ -175,7 +175,7 @@
                 <div class="clearfix"></div>
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center">
-                        <p>Note: This guest will be added to your <strong>Provisional Guests</strong> list. When you are ready, you can click on the <strong>Send Email Invites</strong> button to send them an official invite.</p>
+                        <p>Note: These guests will be added to your <strong>Provisional Guests</strong> list. When you are ready, you can click on the <strong>Send Email Invites</strong> button to send them an official invite.</p>
                     </div>
                 </div>
             </form>
