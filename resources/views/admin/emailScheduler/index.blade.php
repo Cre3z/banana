@@ -29,7 +29,7 @@
                                 <a href="/add-email" class="btn btn-primary floatRight">+ Add Email</a>
                             </div>
                             <div id="toolbar">
-                                <a href="#" class="btn btn-warning floatRight delete_emails"><i class="material-icons">delete_forever</i> Delete Emails</a>
+                                <a href="#" class="btn btn-danger floatRight delete_emails"><i class="material-icons">delete_forever</i> Delete Emails</a>
                             </div>
                             <div class="clearfix"></div>
                             <table data-pagination="true" data-search="true" data-toggle="table" data-url="/emails" class="table" data-toolbar="#toolbar" id="emails_tbl">

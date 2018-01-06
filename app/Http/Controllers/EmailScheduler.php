@@ -41,6 +41,7 @@ class EmailScheduler extends Controller
         $email->time = $request->get("time");
         $email->timetosend = strtotime($request->get("date") .' '. $request->get("time"));
         $email->body = $request->get("body");
+        $email->sent = false;
         $email->save();
         
         return redirect('/email-scheduler');

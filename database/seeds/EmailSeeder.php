@@ -18,6 +18,7 @@ class EmailSeeder extends Seeder
         $email->time = 'test time';
         $email->timetosend = strtotime('now +1min');
         $email->body = "HELLO WORLD";
+        $email->sent = false;
         $email->save();
     }
 }

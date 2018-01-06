@@ -24,7 +24,7 @@ Artisan::command('sendmails', function() {
     // our timerange is an hour ago from now.
     $start  = time() - 3600;
     $end    = time();
-    $emails = \App\Email::where('timetosend', '>=', $start)->where('timetosend', '<=', $end)->get();
+    $emails = \App\Email::where('timetosend', '>=', $start)->where('timetosend', '<=', $end)->where('sent', false)->get();
 
     // Now we get all the guests
     $guests = \App\Guest::all();
@@ -35,7 +35,8 @@ Artisan::command('sendmails', function() {
         foreach($emails AS $email) {
             $body   = $email->body;
             $subject   = $email->subject;
-            $send = Mail::to($gEmail)->send(new GuestEmail($guest, $body, $subject));
+            $send = Mail::to($gEmail)->send(new GuestEmail($guest, $body, $subject))->from('noreply@suzaanjovan.co.za');
+            if(!$email->sent){ $email->sent = true; $email->save();}
             echo "Mail sent to: ({$gName} {$gSurname}) {$gEmail} \n";
         }
     }

@@ -20,7 +20,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header" data-background-color="red">
+                        <div class="card-header" data-background-color="blue">
                             <h4 class="title">All Users</h4>
                             <p class="category">Users that have access to this system.</p>
                         </div>
@@ -29,7 +29,7 @@
                                 <a href="/add-user" class="btn btn-primary floatRight">+ Add User</a>
                             </div>
                             <div id="toolbar">
-                                <a href="#" class="btn btn-warning floatRight deactivate"><i class="material-icons">delete_forever</i> Deactivate Users</a>
+                                <a href="#" class="btn btn-danger floatRight deactivate"><i class="material-icons">delete_forever</i> Deactivate Users</a>
                             </div>
                             <div class="clearfix"></div>
                             <table data-pagination="true" data-search="true" data-toggle="table" data-url="/users_json" class="table" data-toolbar="#toolbar" id="users_tbl">
