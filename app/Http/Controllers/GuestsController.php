@@ -29,7 +29,11 @@ class GuestsController extends Controller
                 $plus_one->name = $request->get("name") . "'s Plus One";
                 $plus_one->email = $request->get("email");
                 $plus_one->cell = $request->get("cell");
-                if($request->get("rsvp") == "on"){$plus_one->invited = "1";$plus_one->rsvp = "yes";}
+                if($request->get("rsvp") == "on"){
+                    $plus_one->invited = "1";$plus_one->rsvp = "yes";
+                } else {
+                    $plus_one->invited = "0";$plus_one->rsvp = "no";
+                }
                 $plus_one->save();
             }
             
@@ -38,9 +42,16 @@ class GuestsController extends Controller
             $admin->surname = $request->get("surname");
             $admin->cell = $request->get("cell");
             $admin->email = $request->get("email");
-            if($request->get("plus_one") == "on"){$admin->plus_one = "yes";}
-            $admin->plus_one_id = $plus_one->id;
-            if($request->get("rsvp") == "on"){$admin->invited = "1";$admin->rsvp = "yes";}
+            if($request->get("plus_one") == "on"){
+                $admin->plus_one = "yes"; $admin->plus_one_id = $plus_one->id;
+            } else {
+                $admin->plus_one = "no"; $admin->plus_one_id = '';
+            }
+            if($request->get("rsvp") == "on"){
+                $admin->invited = "1";$admin->rsvp = "yes";
+            } else {
+                $admin->invited = "0";$admin->rsvp = "no";
+            }
             $admin->accommodation = "";
             $admin->dietary = "";
             $admin->save();
@@ -65,7 +76,11 @@ class GuestsController extends Controller
             $plus_one->surname = $request->get("surname")[0];
             $plus_one->cell = $request->get("cell");
             $plus_one->email = $request->get("email");
-            if($request->get("rsvp") == "on"){$plus_one->invited = "1";$plus_one->rsvp = "yes";}
+            if($request->get("rsvp") == "on"){
+                $plus_one->invited = "1";$plus_one->rsvp = "yes";
+            } else {
+                $plus_one->invited = "0";$plus_one->rsvp = "no";
+            }
             $plus_one->plus_one = "no";
             $plus_one->save();
             
@@ -76,7 +91,11 @@ class GuestsController extends Controller
             $admin->email = $request->get("email");
             $admin->plus_one = "no";
             $admin->plus_one_id = $plus_one->id;
-            if($request->get("rsvp") == "on"){$admin->invited = "1";$admin->rsvp = "yes";}
+            if($request->get("rsvp") == "on"){
+                $admin->invited = "1";$admin->rsvp = "yes";
+            } else {
+                $admin->invited = "0";$admin->rsvp = "no";
+            }
             $admin->accommodation = "";
             $admin->dietary = "";
             $admin->save();
