@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Foundation\Inspiring;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\GuestEmail;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,8 +34,9 @@ Artisan::command('sendmails', function() {
         $gSurname   = $guest->surname;
         foreach($emails AS $email) {
             $body   = $email->body;
-            // SEND MAIL HERE
-            echo "Mail send to: ({$gName} {$gSurname}) {$gEmail} \n";
+            $subject   = $email->subject;
+            $send = Mail::to($gEmail)->send(new GuestEmail($guest, $body, $subject));
+            echo "Mail sent to: ({$gName} {$gSurname}) {$gEmail} \n";
         }
     }
 
