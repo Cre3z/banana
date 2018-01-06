@@ -41,14 +41,14 @@
                             <p>Guests</p>
                         </a>
                     </li>
-<!--
-                    <li>
-                        <a href="/guests">
-                            <i class="material-icons">event_seat</i>
-                            <p>Seating</p>
+
+                    <li id="email-scheduler">
+                        <a href="/email-scheduler">
+                            <i class="material-icons">email</i>
+                            <p>Schedule Emails</p>
                         </a>
                     </li>
--->
+
                 </ul>
             </div>
         </div>
