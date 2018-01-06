@@ -50,6 +50,15 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group label-floating is-empty">
+                                        <label class="control-label">Email Subject</label><br>
+                                        <input type="text" class="form-control" name="subject" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating is-empty">
                                         <label class="control-label">Enter email message content here...</label>
                                         <textarea name="body" id="emailBody" required class="form-control" placeholder="" rows="10"></textarea>
                                     <span class="material-input"></span></div>

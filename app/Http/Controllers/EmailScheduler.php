@@ -36,10 +36,14 @@ class EmailScheduler extends Controller
     {
         $email = new Email;
         $email->name = $request->get("name");
+        $email->subject = $request->get("subject");
         $email->date = $request->get("date");
         $email->time = $request->get("time");
+        $email->timetosend = strtotime('now +1min');
         $email->body = $request->get("body");
         $email->save();
+        
+        return redirect('/email-scheduler');
     }
 
     /**

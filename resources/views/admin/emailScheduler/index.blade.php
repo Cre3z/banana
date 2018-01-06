@@ -16,7 +16,7 @@
                     <div class="card">
                         <div class="card-header" data-background-color="orange">
                             <h4 class="title">All Emails</h4>
-                            <p class="category">All guests guests, invited, pending and RSVP.</p>
+                            <p class="category">Emails scheduled to be sent out to all your guests.</p>
                         </div>
                         <div class="card-content table-responsive">
                             <div id="">
@@ -26,7 +26,10 @@
                             <table data-pagination="true" data-search="true" data-toggle="table" data-url="/emails" class="table" data-toolbar="#toolbar">
                                 <thead class="text-primary">
                                 <tr>
-                                    <th>Something Goes here</th>
+                                    <th data-sortable="true" data-field="name">Name</th>
+                                    <th data-field="subject">Subject</th>
+                                    <th data-sortable="true" data-field="date">Date</th>
+                                    <th data-sortable="true" data-field="time">Time</th>
                                 </tr>
                                 </thead>
                             </table>
