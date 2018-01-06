@@ -33,10 +33,19 @@ Route::group(['middleware' => 'admin'], function() {
     Route::get('/guests_pending', 'GuestsController@pending')->name('guests_pending');
     Route::get('/guests_pending_json', 'GuestsController@pendingJSON')->name('guests_pending_json');
     Route::post('/guests_send', 'GuestsController@guestsSend')->name('guests_send');
-
+    
     Route::get('/email-scheduler',  'EmailScheduler@indexView');
     Route::get('/add-email',      'EmailScheduler@addView');
     Route::post('/add-email',      'EmailScheduler@create');
     Route::resource('/emails',      'EmailScheduler');
+    
+    Route::get('/users',  'UserController@index');
+    Route::get('/add-user',  'UserController@addView');
+    Route::get('/users_json',  'UserController@indexJSON');
+    Route::post('/add-user',  'UserController@add');
+    Route::post('/deactivate',  'UserController@deactivate');
+    
+    Route::get('/logout',  'UserController@logout');
+    Route::get('/register',  'HomeController@index');
 
 });
