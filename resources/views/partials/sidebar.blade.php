@@ -19,14 +19,12 @@
                             <p>Dashboard</p>
                         </a>
                     </li>
-<!--
-                    <li>
-                        <a href="/guests">
+                    <li id="todo">
+                        <a href="/todo">
                             <i class="material-icons">playlist_add_check</i>
                             <p>To Do</p>
                         </a>
                     </li>
--->
 <!--
                     <li>
                         <a href="/guests">

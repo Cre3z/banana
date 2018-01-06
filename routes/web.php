@@ -34,6 +34,8 @@ Route::group(['middleware' => 'admin'], function() {
     Route::get('/guests_pending_json', 'GuestsController@pendingJSON')->name('guests_pending_json');
     Route::post('/guests_send', 'GuestsController@guestsSend')->name('guests_send');
     
+    Route::get('/todo',  'TodoController@index');
+    
     Route::get('/email-scheduler',  'EmailScheduler@indexView');
     Route::get('/add-email',      'EmailScheduler@addView');
     Route::post('/add-email',      'EmailScheduler@create');
