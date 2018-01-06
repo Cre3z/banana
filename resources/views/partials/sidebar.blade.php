@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="purple" data-image="/admin/img/sidebar-1.jpg">
+<div class="sidebar" data-color="{{ Auth::user()->color }}" data-image="/admin/img/sidebar-1.jpg">
             <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
 
