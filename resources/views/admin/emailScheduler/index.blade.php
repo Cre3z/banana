@@ -4,7 +4,6 @@
     <nav class="navbar navbar-transparent navbar-absolute">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/home"> Home </a>
                 <a class="navbar-brand" href="/email-scheduler"> Email Scheduler </a>
             </div>
         </div>
@@ -15,13 +14,13 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="card">
-                        <div class="card-header" data-background-color="green">
-                            <h4 class="title">All Guests</h4>
+                        <div class="card-header" data-background-color="orange">
+                            <h4 class="title">All Emails</h4>
                             <p class="category">All guests guests, invited, pending and RSVP.</p>
                         </div>
                         <div class="card-content table-responsive">
                             <div id="">
-                                <a href="/guests_add" class="btn btn-primary floatRight">+ Invite Guest</a>
+                                <a href="/guests_add" class="btn btn-primary floatRight">+ Add Email</a>
                             </div>
                             <div class="clearfix"></div>
                             <table data-pagination="true" data-search="true" data-toggle="table" data-url="/emails" class="table" data-toolbar="#toolbar">
@@ -37,4 +36,11 @@
             </div>
         </div>
     </div>
+<script>
+    $(document).ready(function(){
+        $('.nav li').removeClass('active');
+        $('#email-scheduler').addClass('active');
+        $('.couple_invite').on('change', function(){ $('.invite_form').slideToggle();})
+    });
+</script>
 @endsection
