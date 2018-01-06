@@ -35,6 +35,7 @@ Route::group(['middleware' => 'admin'], function() {
     Route::post('/guests_send', 'GuestsController@guestsSend')->name('guests_send');
 
     Route::get('/email-scheduler',  'EmailScheduler@indexView');
+    Route::get('/add-email',      'EmailScheduler@addView');
     Route::resource('/emails',      'EmailScheduler');
 
 });

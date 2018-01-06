@@ -20,7 +20,7 @@
                         </div>
                         <div class="card-content table-responsive">
                             <div id="">
-                                <a href="/guests_add" class="btn btn-primary floatRight">+ Add Email</a>
+                                <a href="/add-email" class="btn btn-primary floatRight">+ Add Email</a>
                             </div>
                             <div class="clearfix"></div>
                             <table data-pagination="true" data-search="true" data-toggle="table" data-url="/emails" class="table" data-toolbar="#toolbar">
@@ -40,7 +40,6 @@
     $(document).ready(function(){
         $('.nav li').removeClass('active');
         $('#email-scheduler').addClass('active');
-        $('.couple_invite').on('change', function(){ $('.invite_form').slideToggle();})
     });
 </script>
 @endsection

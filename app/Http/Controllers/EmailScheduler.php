@@ -19,7 +19,12 @@ class EmailScheduler extends Controller
      */
     public function index()
     {
-        return Email::paginate(15)->toJson();
+        $all = Email::all();
+        return response()->json($all);
+    }
+    
+    public function addView(){
+        return view('admin.emailScheduler.add');
     }
 
     /**
@@ -27,9 +32,14 @@ class EmailScheduler extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $email = new Email;
+        $email->name = $request->get("name");
+        $email->date = $request->get("date");
+        $email->time = $request->get("time");
+        $email->body = $request->get("body");
+        $email->save();
     }
 
     /**
