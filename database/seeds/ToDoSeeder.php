@@ -21,6 +21,7 @@ class ToDoSeeder extends Seeder
         ];
         $admin->public = false;
         $admin->user = 'admin@example.com';
+        $admin->event = 1;
         $admin->save();
     }
 }

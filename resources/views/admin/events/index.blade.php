@@ -16,14 +16,14 @@
                             <a href="/events/add" class="btn btn-primary floatRight">+ Add Event</a>
                         </div>
                         <div class="clearfix"></div>
-                        <table data-pagination="true" data-search="true" data-toggle="table" data-url="/events_json" class="table" data-toolbar="#toolbar">
+                        <table data-pagination="true" data-search="true" data-toggle="table" data-url="/events/json" class="table" data-toolbar="#toolbar">
                             <thead class="text-primary">
                                 <tr>
                                     <th data-sortable="true" data-field="title">Title</th>
                                     <th data-field="date">Date</th>
                                     <th data-field="time">Time</th>
                                     <th data-sortable="true" data-field="organizer">Organizer</th>
-                                    <th data-sortable="true" data-field="attendees">Attendees</th>
+                                    <th data-sortable="true" data-field="count">Attendees</th>
                                 </tr>
                             </thead>
                         </table>
