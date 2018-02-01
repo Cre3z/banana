@@ -28,6 +28,7 @@ class EventController extends Controller
         $event->date = $request->get('date');
         $event->time = $request->get('time');
         $event->organizer = Auth::user()->id;
+        $event->organizer_name = Auth::user()->name;
         $event->type = $request->get('type');
         $event->count = 0;
         $event->save();

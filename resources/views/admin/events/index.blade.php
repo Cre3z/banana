@@ -22,7 +22,7 @@
                                     <th data-sortable="true" data-field="title">Title</th>
                                     <th data-field="date">Date</th>
                                     <th data-field="time">Time</th>
-                                    <th data-sortable="true" data-field="organizer">Organizer</th>
+                                    <th data-sortable="true" data-field="organizer_name">Organizer</th>
                                     <th data-sortable="true" data-field="count">Attendees</th>
                                 </tr>
                             </thead>

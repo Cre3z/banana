@@ -18,7 +18,8 @@ class EventSeeder extends Seeder
       $event->description = 'This is my test description.';
       $event->date = '2018-05-06';
       $event->time = '14:00';
-      $event->organizer = 'Administrator';
+      $event->organizer = 1;
+      $event->organizer_name = 'Administrator';
       $event->count = 10;
       $event->attendees = [1, 5, 6, 7, 8, 9];
       $event->comments = [
