@@ -12,9 +12,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        if($ex = User::where('email', 'admin@example.com')->first()) {
-            $ex->delete();
-        }
+        if($ex = User::where('email', 'admin@example.com')->first()) {$ex->delete();}
         $admin = new User();
         $admin->name = "Administrator";
         $admin->type = "admin";

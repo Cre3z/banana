@@ -91,7 +91,7 @@
         </div>
         <div class="row">
           @if($todo)
-          <div class="col-lg-6 col-md-12">
+          <div class="col-lg-4 col-md-12">
               <a href="#">
                   <div class="card card-nav-tabs">
                       <div class="card-header" data-background-color="blue">

@@ -30,7 +30,7 @@ class HomeController extends Controller
         $guest_total = Guest::count();
         $rsvp_invites = Guest::where('invited', '1')->where('rsvp', 'yes')->count();
         $out_invites = Guest::where('invited', '0')->count();
-        $todo = Todo::where('user', Auth::user()->email)->where('public', false)->first();
+        $todo = Todo::where('user', Auth::user()->email)->where('public', true)->first();
         return view('home', ['invites_sent'=>$invites_sent, 'guest_total'=>$guest_total, 'rsvp_invites'=>$rsvp_invites, 'out_invites'=>$out_invites, 'todo'=>$todo]);
     }
 }
