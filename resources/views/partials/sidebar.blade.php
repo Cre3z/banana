@@ -46,14 +46,21 @@
                             <p>Schedule Emails</p>
                         </a>
                     </li>
-                    
+
+                    <li id="events">
+                        <a href="/events">
+                            <i class="material-icons">today</i>
+                            <p>Events</p>
+                        </a>
+                    </li>
+
                     <li id="users">
                         <a href="/users">
                             <i class="material-icons">security</i>
                             <p>Users</p>
                         </a>
                     </li>
-                    
+
                     <li class="active-pro">
                         <a href="/logout">
                             <i class="material-icons">power</i>
