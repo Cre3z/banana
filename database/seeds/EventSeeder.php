@@ -25,6 +25,7 @@ class EventSeeder extends Seeder
         ['body'=> "this is a test", "user"=> 1, 'name'=> 'Admin', 'datetime'=> '2018-05-04 16:34']
       ];
       $event->todo = 1;
+      $event->type = 'naughty';
       $event->save();
     }
 }

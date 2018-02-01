@@ -36,6 +36,8 @@ Route::group(['middleware' => 'admin'], function() {
 
     Route::get('/events', 'EventController@index')->name('events');
     Route::get('/events/json', 'EventController@json')->name('events_json');
+    Route::get('/events/add', 'EventController@add')->name('events_add');
+    Route::post('/events/add', 'EventController@addPost')->name('events_add_post');
 
     Route::get('/todo',  'TodoController@index');
     Route::post('/todo/new',  'TodoController@newList');

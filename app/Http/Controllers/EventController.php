@@ -17,4 +17,22 @@ class EventController extends Controller
         return response()->json($all);
     }
 
+    public function add(){
+        return view('admin.events.add');
+    }
+
+    public function addPost(Request $request){
+        $event = new Event;
+        $event->title = $request->get('title');
+        $event->description = $request->get('description');
+        $event->date = $request->get('date');
+        $event->time = $request->get('time');
+        $event->organizer = Auth::user()->id;
+        $event->type = $request->get('type');
+        $event->count = 0;
+        $event->save();
+
+        return redirect('/events');
+    }
+
 }
