@@ -18,7 +18,7 @@
 <div class="content mt-70">
     <div class="container-fluid">
         <div class="row">
-            
+
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <div class="card-header" data-background-color="red">
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <div class="card-header" data-background-color="orange">
@@ -54,7 +54,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <div class="card-header" data-background-color="blue">
@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="card card-stats">
                     <div class="card-header" data-background-color="green">
@@ -88,6 +88,99 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+          @if($todo)
+          <div class="col-lg-6 col-md-12">
+              <a href="#">
+                  <div class="card card-nav-tabs">
+                      <div class="card-header" data-background-color="blue">
+                          <h4 class="title">{{ $todo->name }}</h4>
+                          <p class="category">{{ $todo->subtext }}</p>
+                      </div>
+                      <div class="card-content">
+                          <div class="row">
+                              <div class="col-xs-12">
+                                  <div class="checkbox floatRight">
+                                      <label>
+                                          @if($todo->public == true)
+                                          <input type="checkbox" name="public_list" class="public_list" checked data-id="{{ $todo->id }}">
+                                          @else
+                                          <input type="checkbox" name="public_list" class="public_list" data-id="{{ $todo->id }}">
+                                          @endif
+                                          Make this list public.
+                                      </label>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <table class="table">
+                              <tbody>
+                                @if(count($todo->entries) > 0)
+                                  @foreach($todo->entries as $key=>$entry)
+                                  <tr>
+                                      <td>
+                                          <div class="checkbox">
+                                              <label>
+                                                  @if($entry['checked'] == true)
+                                                  <input type="checkbox" name="todo_entry" class="todo_entry" checked data-index="{{ $key }}" data-id="{{ $todo->id }}">
+                                                  @else
+                                                  <input type="checkbox" name="todo_entry" class="todo_entry" data-index="{{ $key }}" data-id="{{ $todo->id }}">
+                                                  @endif
+                                              </label>
+                                          </div>
+                                      </td>
+                                      <td class="input_hidden hidden"><input name="new" class="edit_entry_input" value="{{ $entry['body']}}" type="text"></td>
+                                      <td class="input_hidden edit_entry_input_value">{{ $entry['body']}}</td>
+                                      <td class="td-actions text-right">
+                                          <button type="button" rel="tooltip" title="" class="btn btn-primary btn-simple btn-xs edit_entry" data-original-title="Edit Task" data-index="{{ $key }}" data-id="{{ $todo->id }}">
+                                              <i class="material-icons">edit</i>
+                                          </button>
+                                          <button type="button" rel="tooltip" title="" class="btn btn-primary btn-simple btn-xs edit_entry hidden entry_save_input" data-original-title="Save" data-index="{{ $key }}" data-id="{{ $todo->id }}">
+                                              <i class="material-icons">done</i>
+                                          </button>
+                                          <button type="button" rel="tooltip" title="" class="btn btn-danger btn-simple btn-xs remove_entry" data-original-title="Remove" data-index="{{ $key }}" data-id="{{ $todo->id }}">
+                                              <i class="material-icons">close</i>
+                                          </button>
+                                      </td>
+                                  </tr>
+                                  @endforeach
+                                  @else
+                                  <br><br><tr><td class="text-center" colspan="3">I am sure there is a reason you created me...</td></tr>
+                                  @endif
+                              </tbody>
+                          </table>
+                          <hr>
+                          <div class="clearfix"></div>
+                            <form action="/todo/entry/new" method="post" role="form">
+                              {{ csrf_field() }}
+                              <div class="col-xs-12">
+                                  <div class="form-group label-floating is-empty">
+                                      <label class="control-label">Please remember...</label>
+                                      <input type="text" class="form-control" name="new">
+                                  <span class="material-input"></span></div>
+                              </div>
+
+                              <div class="col-xs-12">
+                                  <input type="hidden" data-id="{{ $todo->id }}" class="form_id" name="id" value="{{ $todo->id }}">
+                                  <button type="submit" class="btn btn-success btn-block">+ Add to List<div class="ripple-container"></div>
+                                  </button>
+                              </div>
+                            </form>
+                            <form role="form" action="/todo/delete" method="post">
+                              {{ csrf_field() }}
+                              <div class="col-xs-12 text-right">
+                                  <input type="hidden" data-id="{{ $todo->id }}" class="form_id" name="id" value="{{ $todo->id }}">
+                                  <button type="submit" rel="tooltip" title="" class="btn btn-simple btn-xs remove_entry" data-original-title="Remove this List" data-index="{{ $key }}" data-id="{{ $todo->id }}">
+                                      <i class="material-icons">close</i>Remove list
+                                  </button>
+                              </div>
+                            </form>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          @endif
         </div>
 <!--
         <div class="row">
