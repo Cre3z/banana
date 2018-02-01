@@ -22,16 +22,15 @@
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
-    
+
     <script src="/admin/js/jquery-3.2.1.min.js" type="text/javascript"></script>
-    
+
 </head>
 <body>
     <div class="wrapper">
-        
+
         @include('partials.sidebar')
-        @include('modals.send_emails')
-        
+
         <div class="main-panel">
             @yield('content')
         </div>

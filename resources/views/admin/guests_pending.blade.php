@@ -1,10 +1,11 @@
+@include('modals.send_emails')
 @extends('layouts.wed')
 @section('content')
 @include('partials.hamburger')
 <div class="content mt-70">
     <div class="container-fluid">
         <div class="row">
-            
+
             <div class="col-lg-4 col-md-12">
                 <a href="/guests_all">
                     <div class="card card-nav-tabs">
@@ -18,7 +19,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div class="col-lg-4 col-md-12">
                 <a href="/guests_rsvp">
                     <div class="card card-nav-tabs">
@@ -32,7 +33,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div class="col-lg-4 col-md-12">
                 <a href="/guests_invited">
                     <div class="card card-nav-tabs">
@@ -46,7 +47,7 @@
                     </div>
                 </a>
             </div>
-            
+
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header" data-background-color="orange">
@@ -73,7 +74,7 @@
                                 </tr>
                             </thead>
                         </table>
-                        
+
                     </div>
                 </div>
             </div>

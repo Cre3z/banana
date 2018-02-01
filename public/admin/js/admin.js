@@ -1,12 +1,15 @@
 $(document).ready(function(){
-   
+
+    //set headers
     $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
-    $('a.send').on('click', function(){ 
+
+    //send emails on click
+    $('a.send').on('click', function(){
         var data = $('table').bootstrapTable('getSelections');
         if(data.length != 0){
-            $('.row.overlay').show(); 
+            $('.row.overlay').show();
             var count = 0;
-            $.each(data, function(key, value){ 
+            $.each(data, function(key, value){
                 count++;
                 if(value.email != null){
                     $('.text_name').text(value.name);
@@ -21,13 +24,14 @@ $(document).ready(function(){
             });
         }
     });
-    
-    $('a.deactivate').on('click', function(){ 
+
+    //deactivate users on the system
+    $('a.deactivate').on('click', function(){
         var data = $('#users_tbl').bootstrapTable('getSelections');
         if(data.length != 0){
-            $('.row.overlay').show(); 
+            $('.row.overlay').show();
             var count = 0;
-            $.each(data, function(key, value){ 
+            $.each(data, function(key, value){
                 count++;
                 if(value.email != null){
 //                    $('.text_name').text(value.name);
@@ -42,13 +46,14 @@ $(document).ready(function(){
             });
         }
     });
-    
-    $('a.delete_emails').on('click', function(){ 
+
+    //delete scheduled emails on table click
+    $('a.delete_emails').on('click', function(){
         var data = $('#emails_tbl').bootstrapTable('getSelections');
         if(data.length != 0){
-            $('.row.overlay').show(); 
+            $('.row.overlay').show();
             var count = 0;
-            $.each(data, function(key, value){ 
+            $.each(data, function(key, value){
                 count++;
                 if(value._id != null){
 //                    $('.text_name').text(value.name);
@@ -63,5 +68,63 @@ $(document).ready(function(){
             });
         }
     });
-    
+
+    //toggle to do list public or private
+    $('input.public_list').on('change', function(){
+        var id = $(this).data('id');
+        $.ajax({
+          url: "/todo/status",
+          data: {id: id},
+          method: 'post',
+          success: function(data){console.log(data);}
+        });
+    });
+
+    //todo entry status
+    $('input.todo_entry').on('change', function(){
+        var id = $(this).data('id');
+        var index = $(this).data('index');
+        $.ajax({
+          url: "/todo/entry",
+          data: {id: id, index: index},
+          method: 'post',
+          success: function(data){console.log(data);}
+        });
+    });
+
+    //todo entry delete
+    $('button.remove_entry').on('click', function(){
+        var id = $(this).data('id');
+        var index = $(this).data('index');
+        var parent = $(this).closest('tr');
+        $.ajax({
+          url: "/todo/entry/delete",
+          data: {id: id, index: index},
+          method: 'post',
+          success: function(data){parent.remove();}
+        });
+    });
+
+    //todo toggle hidden input
+    $('button.edit_entry').on('click', function(){
+      $('td.input_hidden').toggleClass('hidden');
+      $('button.edit_entry').toggleClass('hidden');
+    })
+
+    //toggle new list modal
+    $('a.add_new_list').on('click', function(){$('div.todo_list_new').toggle();})
+
+    //save entry on edit_entry
+    $('button.entry_save_input').on('click', function(){
+      var value = $('.edit_entry_input').val();
+      var id = $(this).data('id');
+      var index = $(this).data('index');
+      $.ajax({
+        url: "/todo/entry/update",
+        data: {id: id, index: index, value: value},
+        method: 'post',
+        success: function(data){$('.edit_entry_input_value').text(value);}
+      });
+    })
+
 });

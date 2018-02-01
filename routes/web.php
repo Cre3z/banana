@@ -33,21 +33,28 @@ Route::group(['middleware' => 'admin'], function() {
     Route::get('/guests_pending', 'GuestsController@pending')->name('guests_pending');
     Route::get('/guests_pending_json', 'GuestsController@pendingJSON')->name('guests_pending_json');
     Route::post('/guests_send', 'GuestsController@guestsSend')->name('guests_send');
-    
+
     Route::get('/todo',  'TodoController@index');
-    
+    Route::post('/todo/new',  'TodoController@newList');
+    Route::post('/todo/delete',  'TodoController@deleteList');
+    Route::post('/todo/status',  'TodoController@status');
+    Route::post('/todo/entry',  'TodoController@checked');
+    Route::post('/todo/entry/update',  'TodoController@update');
+    Route::post('/todo/entry/new',  'TodoController@new');
+    Route::post('/todo/entry/delete',  'TodoController@delete');
+
     Route::get('/email-scheduler',  'EmailScheduler@indexView');
     Route::get('/add-email',      'EmailScheduler@addView');
     Route::post('/add-email',      'EmailScheduler@create');
     Route::post('/remove-email',      'EmailScheduler@delete');
     Route::resource('/emails',      'EmailScheduler');
-    
+
     Route::get('/users',  'UserController@index');
     Route::get('/add-user',  'UserController@addView');
     Route::get('/users_json',  'UserController@indexJSON');
     Route::post('/add-user',  'UserController@add');
     Route::post('/deactivate',  'UserController@deactivate');
-    
+
     Route::get('/logout',  'UserController@logout');
     Route::get('/register',  'HomeController@index');
 
