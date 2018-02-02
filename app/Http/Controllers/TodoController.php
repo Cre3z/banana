@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Todo;
+use App\Event;
 use Auth;
 
 class TodoController extends Controller
@@ -71,7 +72,10 @@ class TodoController extends Controller
         $todo->entries = $array;
         $todo->save();
 
-        return redirect('/todo');
+        if($request->get('event')){
+          $title = str_replace(' ', '-', $request->get('event'));
+          return redirect('/events/'.$title);
+        } else { return redirect('/todo'); }
     }
 
     public function delete(Request $request){

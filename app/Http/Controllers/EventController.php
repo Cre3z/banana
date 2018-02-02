@@ -64,8 +64,33 @@ class EventController extends Controller
 
     public function view($title){
         $event = Event::where('title', str_replace('-', ' ', $title))->first();
-        if($event->todo){$todo = Todo::find($event->todo);}
-        return view('admin.events.view', ['event'=> $event]);
+        if($event->todo){$todos = Todo::find($event->todo);}
+        else{$todos = Todo::where('user', Auth::user()->email)->get();}
+        return view('admin.events.view', ['event'=> $event, 'todos'=>$todos]);
+    }
+
+    public function todo(Request $request){
+        $event = Event::find($request->get('id'));
+        $event->todo = $request->get('todo');
+        $event->save();
+        $todo = Todo::find($request->get('todo'));
+        $todo->event = $request->get('id');
+        $todo->save();
+        $title = str_replace(' ', '-', $event->title);
+
+        return redirect('/events/'.$title);
+    }
+
+    public function unlink(Request $request){
+      $event = Event::find($request->get('id'));
+      $event->todo = 0;
+      $event->save();
+      $todo = Todo::find($request->get('todo'));
+      $todo->event = 0;
+      $todo->save();
+      $title = str_replace(' ', '-', $event->title);
+
+      return redirect('/events/'.$title);
     }
 
 }
