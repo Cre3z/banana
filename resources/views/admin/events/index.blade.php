@@ -16,7 +16,7 @@
                             <a href="/events/add" class="btn btn-primary floatRight">+ Add Event</a>
                         </div>
                         <div class="clearfix"></div>
-                        <table data-pagination="true" data-search="true" data-toggle="table" data-url="/events/json" class="table" data-toolbar="#toolbar">
+                        <table data-pagination="true" data-search="true" data-toggle="table" data-url="/events/json" class="table" data-toolbar="#toolbar" data-value="events">
                             <thead class="text-primary">
                                 <tr>
                                     <th data-sortable="true" data-field="title">Title</th>

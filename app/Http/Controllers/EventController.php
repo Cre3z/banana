@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Auth;
 use App\Event;
+use App\Todo;
 
 class EventController extends Controller
 {
@@ -27,6 +28,7 @@ class EventController extends Controller
         $event->description = $request->get('description');
         $event->date = $request->get('date');
         $event->time = $request->get('time');
+        $event->location = $request->get('location');
         $event->organizer = Auth::user()->id;
         $event->organizer_name = Auth::user()->name;
         $event->type = $request->get('type');
@@ -34,6 +36,12 @@ class EventController extends Controller
         $event->save();
 
         return redirect('/events');
+    }
+
+    public function view($title){
+        $event = Event::where('title', $title)->first();
+        $todo = Todo::find($event->todo);
+        return view('admin.events.view', ['event'=> $event]);
     }
 
 }

@@ -59,6 +59,15 @@
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group label-floating is-empty">
+                                        <label class="control-label">Enter event location here...</label>
+                                        <input type="text" class="form-control" name="location" required>
+                                    <span class="material-input"></span></div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group label-floating is-empty">
                                         <label class="control-label">Enter event description here...</label>
                                         <textarea name="description" id="emailBody" required class="form-control" placeholder="" rows="10"></textarea>
                                     <span class="material-input"></span></div>
@@ -90,7 +99,7 @@
 <script>
     $(document).ready(function(){
         $('.nav li').removeClass('active');
-        $('#email-scheduler').addClass('active');
+        $('#events').addClass('active');
     });
 </script>
 @endsection
