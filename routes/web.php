@@ -36,9 +36,12 @@ Route::group(['middleware' => 'admin'], function() {
 
     Route::get('/events', 'EventController@index')->name('events');
     Route::get('/events/json', 'EventController@json')->name('events_json');
+    Route::post('/events/delete', 'EventController@delete')->name('events_delete');
     Route::get('/events/add', 'EventController@add')->name('events_add');
     Route::post('/events/add', 'EventController@addPost')->name('events_add_post');
     Route::get('/events/{title}', 'EventController@view')->name('events_view');
+    Route::get('/events/update/{title}', 'EventController@update')->name('events_update');
+    Route::post('/events/update/{title}', 'EventController@updatePost')->name('events_update_post');
 
     Route::get('/todo',  'TodoController@index');
     Route::post('/todo/new',  'TodoController@newList');

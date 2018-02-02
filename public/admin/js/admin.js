@@ -130,7 +130,7 @@ $(document).ready(function(){
     //table view
     $('table').on('click-row.bs.table', function(e, row, $element){
       var value = $(this).data('value'); var title = row.title;
-      if(value) { window.location = '/'+value+'/'+title.replace(/ /g,"-")}
+      if(value) { window.location = '/'+value+'/'+ title.replace(/ /g,"-")}
     });
 
 });
