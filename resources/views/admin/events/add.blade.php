@@ -27,6 +27,16 @@
                             </div>
 
                             <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" name="secret" class="public_list">
+                                            This event is a surprise.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-xs-12 col-sm-3">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label">Title</label><br>

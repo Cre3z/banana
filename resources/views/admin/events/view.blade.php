@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-header" data-background-color="purple">
                         <h4 class="title">{{ ucfirst($event->title) }}</h4>
-                        <p class="category">This event is marked as {{ ucfirst($event->type) }}.</p>
+                        <p class="category">This event is marked as {{ ucfirst($event->type) }}. @if($event->secret) And it's a secret, ssshhhh!@endif</p>
                     </div>
                     <div class="card-content table-responsive">
                         <div class="row">

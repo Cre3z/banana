@@ -25,7 +25,22 @@
                                 </div>
                                 @endif
                             </div>
-
+                            
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="checkbox">
+                                        <label>
+                                            @if($event->secret == true)
+                                            <input type="checkbox" name="secret" class="public_list" checked>
+                                            @else
+                                            <input type="checkbox" name="secret" class="public_list">
+                                            @endif
+                                            This event is a surprise.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            
                             <div class="row">
                                 <div class="col-xs-12 col-sm-3">
                                     <div class="form-group label-floating is-empty">

@@ -44,6 +44,8 @@ class EventController extends Controller
         $event->organizer_name = Auth::user()->name;
         $event->type = $request->get('type');
         $event->count = 0;
+        if($request->get('secret') == 'on'){ $event->secret = true;}
+        else {$event->secret = false;}
         $event->save();
 
         return redirect('/events');
@@ -57,9 +59,11 @@ class EventController extends Controller
         $event->time = $request->get('time');
         $event->location = $request->get('location');
         $event->type = $request->get('type');
+        if($request->get('secret') == 'on'){ $event->secret = true;}
+        else {$event->secret = false;}
         $event->save();
-
-        return redirect('/events');
+        $title = str_replace(' ', '-', $event->title);
+        return redirect('/events/'.$title);
     }
 
     public function view($title){
@@ -77,7 +81,6 @@ class EventController extends Controller
         $todo->event = $request->get('id');
         $todo->save();
         $title = str_replace(' ', '-', $event->title);
-
         return redirect('/events/'.$title);
     }
 
