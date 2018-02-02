@@ -58,7 +58,7 @@
                             <a href="/guests_add" class="btn btn-primary floatRight">+ Invite Guest</a>
                         </div>
                         <div class="clearfix"></div>
-                        <table data-pagination="true" data-search="true" data-toggle="table" data-url="/guests_rsvp_json" class="table" data-toolbar="#toolbar">
+                        <table data-pagination="true" data-search="true" data-toggle="table" data-url="/guests_rsvp_json" class="table" data-toolbar="#toolbar" data-value="guests">
                             <thead class="text-primary">
                                 <tr>
                                     <th data-sortable="true" data-field="name">Name</th>

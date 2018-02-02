@@ -20,6 +20,7 @@ Auth::routes();
 Route::group(['middleware' => 'admin'], function() {
 
     Route::get('/home', 'HomeController@index')->name('home');
+    
     Route::get('/guests', 'GuestsController@index')->name('guests');
     Route::get('/guests_add', 'GuestsController@add')->name('guests_add');
     Route::post('/guests_add', 'GuestsController@addPost')->name('guests_add_post');
@@ -33,6 +34,9 @@ Route::group(['middleware' => 'admin'], function() {
     Route::get('/guests_pending', 'GuestsController@pending')->name('guests_pending');
     Route::get('/guests_pending_json', 'GuestsController@pendingJSON')->name('guests_pending_json');
     Route::post('/guests_send', 'GuestsController@guestsSend')->name('guests_send');
+    Route::get('/guests/{id}', 'GuestsController@edit')->name('guests_edit');
+    Route::post('/guests/{id}', 'GuestsController@update')->name('guests_edit_post');
+    Route::post('/guests/couple/{id}', 'GuestsController@updateCouple')->name('guests_edit_post_couple');
 
     Route::get('/events', 'EventController@index')->name('events');
     Route::get('/events/json', 'EventController@json')->name('events_json');

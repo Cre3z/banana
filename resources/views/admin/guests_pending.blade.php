@@ -63,7 +63,7 @@
                             <a href="#" class="btn btn-default send"><i class="material-icons">mail</i>  Resend Email Invites</a>
                             <p>Note: Plus one's will not receive an email.</p>
                         </div>
-                        <table data-pagination="true" data-search="true" data-toggle="table" data-url="/guests_pending_json" class="table" data-toolbar="#toolbar">
+                        <table data-pagination="true" data-search="true" data-toggle="table" data-url="/guests_pending_json" class="table" data-toolbar="#toolbar" data-value="guests">
                             <thead class="text-primary">
                                 <tr>
                                     <th data-checkbox="true" data-field="id">ID</th>
