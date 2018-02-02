@@ -18,7 +18,7 @@
         <div class="row">
 
             @foreach($all as $one)
-            <div class="col-lg-4 col-md-12">
+            <div class="col-lg-6 col-md-12">
                 <a href="#">
                     <div class="card card-nav-tabs">
                         <div class="card-header" data-background-color="blue">
@@ -57,16 +57,16 @@
                                                 </label>
                                             </div>
                                         </td>
-                                        <td class="input_hidden hidden"><input name="new" class="edit_entry_input" value="{{ $entry['body']}}" type="text"></td>
-                                        <td class="input_hidden edit_entry_input_value">{{ $entry['body']}}</td>
+                                        <td class="input_hidden hidden" id="input_{{ $key }}"><input name="new" class="edit_entry_input form-control" value="{{ $entry['body']}}" type="text" id="input_value_{{ $key }}"></td>
+                                        <td class="input_hidden edit_entry_input_value" id="value_{{ $key }}">{{ $entry['body']}}</td>
                                         <td class="td-actions text-right">
-                                            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-simple btn-xs edit_entry" data-original-title="Edit Task" data-index="{{ $key }}" data-id="{{ $one->id }}">
+                                            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-simple btn-xs edit_entry" data-original-title="Edit Task" data-index="{{ $key }}" data-id="{{ $one->id }}" id="btn_edit_{{ $key }}">
                                                 <i class="material-icons">edit</i>
                                             </button>
-                                            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-simple btn-xs edit_entry hidden entry_save_input" data-original-title="Save" data-index="{{ $key }}" data-id="{{ $one->id }}">
+                                            <button type="button" rel="tooltip" title="" class="btn btn-primary btn-simple btn-xs edit_entry hidden entry_save_input" data-original-title="Save" data-index="{{ $key }}" data-id="{{ $one->id }}" id="btn_save_{{ $key }}">
                                                 <i class="material-icons">done</i>
                                             </button>
-                                            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-simple btn-xs remove_entry" data-original-title="Remove" data-index="{{ $key }}" data-id="{{ $one->id }}">
+                                            <button type="button" rel="tooltip" title="" class="btn btn-danger btn-simple btn-xs remove_entry" data-original-title="Remove" data-index="{{ $key }}" data-id="{{ $one->id }}" id="btn_delete_{{ $key }}">
                                                 <i class="material-icons">close</i>
                                             </button>
                                         </td>

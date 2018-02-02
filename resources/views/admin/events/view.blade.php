@@ -68,6 +68,48 @@
                 </div>
             </div>
             <div class="col-md-6">
+              <div class="clearfix"></div>
+              <div class="row">
+                <div class="col-xs-12">
+                  <a class="btn btn-block btn-success" href="/events/update/{{ str_replace(' ', '-', $event->title) }}">Manage Event Guest List</a>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-lg-6">
+                  <div class="card card-stats">
+                      <div class="card-header" data-background-color="blue">
+                          <i class="material-icons">done_all</i>
+                      </div>
+                      <div class="card-content">
+                          <p class="category">RSVP <br>Invites</p>
+                          <h3 class="title">1</h3>
+                      </div>
+                      <div class="card-footer">
+                          <div class="stats">
+                              <i class="material-icons">date_range</i> Last updated  just now
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-lg-6">
+                  <div class="card card-stats">
+                      <div class="card-header" data-background-color="green">
+                          <i class="material-icons">supervisor_account</i>
+                      </div>
+                      <div class="card-content">
+                          <p class="category">Guest <br>Total</p>
+                          <h3 class="title">1</h3>
+                      </div>
+                      <div class="card-footer">
+                          <div class="stats">
+                              <i class="material-icons">date_range</i> Last updated just now
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+
                 <div class="card card-nav-tabs">
                     <div class="card-header" data-background-color="blue">
                         <h4 class="title">To do List</h4>
@@ -122,8 +164,8 @@
                                             </label>
                                         </div>
                                     </td>
-                                    <td class="input_hidden hidden"><input name="new" class="edit_entry_input" value="{{ $entry['body']}}" type="text"></td>
-                                    <td class="input_hidden edit_entry_input_value">{{ $entry['body']}}</td>
+                                    <td width="40%" class="input_hidden hidden"><input name="new" class="edit_entry_input" value="{{ $entry['body']}}" type="text"></td>
+                                    <td width="40%" class="input_hidden edit_entry_input_value">{{ $entry['body']}}</td>
                                     <td class="td-actions text-right">
                                         <button type="button" rel="tooltip" title="" class="btn btn-primary btn-simple btn-xs edit_entry" data-original-title="Edit Task" data-index="{{ $key }}" data-id="{{ $todos->id }}">
                                             <i class="material-icons">edit</i>

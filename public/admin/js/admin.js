@@ -107,8 +107,8 @@ $(document).ready(function(){
 
     //todo toggle hidden input
     $('button.edit_entry').on('click', function(){
-      $('td.input_hidden').toggleClass('hidden');
-      $('button.edit_entry').toggleClass('hidden');
+        var key = $(this).data('index');
+        $('#btn_edit_' + key + ', #btn_save_' + key + ', #input_' + key + ', #value_' + key).toggleClass('hidden');
     })
 
     //toggle new list modal
@@ -116,14 +116,16 @@ $(document).ready(function(){
 
     //save entry on edit_entry
     $('button.entry_save_input').on('click', function(){
-      var value = $('.edit_entry_input').val();
+      var key = $(this).data('index');
+      var value = $('#input_value_' + key).val();
+      var input = $('#value_' + key).text(value);
       var id = $(this).data('id');
       var index = $(this).data('index');
       $.ajax({
         url: "/todo/entry/update",
         data: {id: id, index: index, value: value},
         method: 'post',
-        success: function(data){$('.edit_entry_input_value').text(value);}
+        success: function(data){}
       });
     });
 
