@@ -39,6 +39,7 @@ Route::group(['middleware' => 'admin'], function() {
     Route::post('/events/delete', 'EventController@delete')->name('events_delete');
     Route::post('/events/todo', 'EventController@todo')->name('events_todo');
     Route::post('/events/unlink', 'EventController@unlink')->name('events_unlink');
+    Route::post('/events/comments', 'EventController@comments')->name('events_comments');
     Route::get('/events/add', 'EventController@add')->name('events_add');
     Route::post('/events/add', 'EventController@addPost')->name('events_add_post');
     Route::get('/events/{title}', 'EventController@view')->name('events_view');

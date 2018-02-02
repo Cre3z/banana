@@ -89,7 +89,22 @@ class EventController extends Controller
       $todo->event = 0;
       $todo->save();
       $title = str_replace(' ', '-', $event->title);
+      return redirect('/events/'.$title);
+    }
 
+    public function comments(Request $request){
+      $event = Event::find($request->get('id'));
+      $array = $event->comments;
+      $comment = [
+        'body'=> $request->get('comment'),
+        'user'=> Auth::user()->id,
+        'name'=> Auth::user()->name,
+        'datetime'=> date('Y-m-d H:i:s'),
+      ];
+      array_unshift($array, $comment);
+      $event->comments = $array;
+      $event->save();
+      $title = str_replace(' ', '-', $event->title);
       return redirect('/events/'.$title);
     }
 

@@ -30,6 +30,42 @@
                         </div>
                     </div>
                 </div>
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Comments</h4>
+                        <p class="category">Hear what people have to say.</p>
+                    </div>
+                    <div class="card-content table-responsive">
+                      <form role="form" action="/events/comments" method="post">
+                        {{ csrf_field() }}
+                        <input name="id" value="{{ $event->id }}" type="hidden">
+                        <div class="row">
+                          <div class="col-xs-12">
+                              <div class="form-group label-floating is-empty">
+                                  <label class="control-label">I have something to say....</label>
+                                  <input type="text" class="form-control" name="comment">
+                              <span class="material-input"></span></div>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-warning btn-block">Post Comment<div class="ripple-container"></div></button>
+                            </div>
+                        </div>
+                      </form>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          @foreach($event->comments as $comment)
+                          <div>
+                            <p><strong>{{ $comment['name'] }}: </strong>{{ $comment['body'] }}</p>
+                            <p class="text-right btn-xs"><small>{{ date('D d M Y', strtotime($comment['datetime'])) }} @ {{ date('H:i', strtotime($comment['datetime'])) }}</small></p>
+                          </div>
+                          <hr>
+                          @endforeach
+                        </div>
+                      </div>
+                    </div>
+                </div>
             </div>
             <div class="col-md-6">
                 <div class="card card-nav-tabs">
