@@ -10,7 +10,9 @@ use App\Todo;
 class EventController extends Controller
 {
     public function index(){
-        return view('admin.events.index');
+        $events = Event:: all();
+        $colors = ['blue', 'orange', 'green', 'red', 'purple', 'default'];
+        return view('admin.events.index', ['events'=>$events, 'colors'=>$colors]);
     }
 
     public function json(){

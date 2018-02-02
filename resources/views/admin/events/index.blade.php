@@ -5,31 +5,42 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-md-12">
-                <div class="card">
-                    <div class="card-header" data-background-color="green">
-                        <h4 class="title">All Events</h4>
-                        <p class="category">Upcoming events that you or your bridal party have scheduled before the big day.</p>
-                    </div>
-                    <div class="card-content table-responsive">
-                        <div id="">
-                            <a href="/events/add" class="btn btn-primary floatRight">+ Add Event</a>
+            <div class="col-lg-4 col-md-6 col-lg-offset-8">
+                <a href="/events/add">
+                    <div class="card card-nav-tabs">
+                        <div class="card-header" data-background-color="red">
+                            <h4 class="title">+ Add a new Event.</h4>
                         </div>
-                        <div class="clearfix"></div>
-                        <table data-pagination="true" data-search="true" data-toggle="table" data-url="/events/json" class="table" data-toolbar="#toolbar" data-value="events">
-                            <thead class="text-primary">
-                                <tr>
-                                    <th data-sortable="true" data-field="title">Title</th>
-                                    <th data-field="date">Date</th>
-                                    <th data-field="time">Time</th>
-                                    <th data-sortable="true" data-field="organizer_name">Organizer</th>
-                                    <th data-sortable="true" data-field="count">Attendees</th>
-                                </tr>
-                            </thead>
-                        </table>
+                        <div class="card-content">
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
+            
+            <div class="clearfix"></div><hr>
+            
+            @foreach($events as $event)
+            <div class="col-lg-4 col-md-6">
+                <a href="/events/{{ str_replace('-', ' ', $event->title) }}">
+                    <div class="card card-nav-tabs">
+                        <div class="card-header" data-background-color="{{ array_rand($colors) }}">
+                            <h4 class="title">{{ ucfirst($event->title) }}</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="col-xs-12 col-sm-7">
+                                <p><strong>Date: </strong>{{ date('d M Y', strtotime($event->date)) }}</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-5">
+                                <p><strong>Time: </strong>{{ $event->time }}</p>
+                            </div>
+                            <div class="col-xs-12">
+                                <p><strong>Location: </strong>{{ $event->location }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            @endforeach
 
         </div>
     </div>
