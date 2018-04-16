@@ -1,4 +1,4 @@
-<div id="qbootstrap-countdown" style="background-image: url(/website/images/cover_bg_2.jpg);" data-section="wedding-day">
+<div id="qbootstrap-countdown" style="background-image: url(/website/images/wedding-day.jpg);" data-section="wedding-day">
     <div class="overlay"></div>
     <div class="display-over">
         <div class="container">

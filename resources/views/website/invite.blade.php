@@ -1,10 +1,10 @@
-<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/cover_bg_1.jpg);">
+<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/invited.jpg);">
     <div class="overlay"></div>
     <div class="container">
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2">
                 <div class="col-md-12 text-center section-heading svg-sm colored">
-                    <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
+                    <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="">
                     <h2>You Are Invited</h2>
                     <div class="row">
                     <div class="col-md-10 col-md-offset-1 subtext">
@@ -72,7 +72,7 @@
     </div>
 </div>
 
-<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/cover_bg_1.jpg);">
+<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/contact_us.jpg);">
     <div class="overlay"></div>
     <div class="container">
         <div class="row animate-box">
@@ -122,7 +122,7 @@
     </div>
 </div>
 
-<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/cover_bg_1.jpg);">
+<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/friday.jpg);">
     <div class="overlay"></div>
     <div class="container">
         <div class="row animate-box">
@@ -162,7 +162,7 @@
     </div>
 </div>
 
-<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/cover_bg_1.jpg);">
+<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/sunday.png);">
     <div class="overlay"></div>
     <div class="container">
         <div class="row animate-box">

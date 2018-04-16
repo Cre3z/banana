@@ -3,7 +3,7 @@
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2">
                 <div class="col-md-12 text-center section-heading svg-sm colored">
-                    <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
+                    <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="">
                     <h2>Ceremony &amp; Party</h2>
                     <div class="row">
                     <div class="col-md-10 col-md-offset-1 subtext">
@@ -16,7 +16,7 @@
         <div class="row row-bottom-padded-md">
             <div class="col-md-6 text-center animate-box">
                 <div class="wedding-events">
-                    <div class="ceremony-bg" style="background-image: url(website/images/wed-ceremony.jpg);"></div>
+                    <div class="ceremony-bg" style="background-image: url(website/images/ceremony.jpg);"></div>
                     <div class="desc">
                         <h3>Wedding Ceremony</h3>
                         <div class="row">
@@ -47,7 +47,7 @@
             </div>
             <div class="col-md-6 text-center animate-box">
                 <div class="wedding-events">
-                    <div class="ceremony-bg" style="background-image: url(website/images/wed-party.jpg);"></div>
+                    <div class="ceremony-bg" style="background-image: url(website/images/reception.jpg);"></div>
                     <div class="desc">
                         <h3>Wedding Party</h3>
                         <div class="row">
