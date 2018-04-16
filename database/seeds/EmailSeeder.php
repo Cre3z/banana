@@ -11,6 +11,10 @@ class EmailSeeder extends Seeder
      */
     public function run()
     {
+        if($ex = \App\Email::all()) {
+            foreach($ex as $x)
+                $x->delete();
+        }
         $email = new \App\Email();
         $email->name = 'test name';
         $email->subject = 'test subject';

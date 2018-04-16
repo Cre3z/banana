@@ -12,7 +12,7 @@ class GuestsTable extends Seeder
      */
     public function run()
     {
-        if($ex = Guest::where('email', 'admin@example.com')->get()) {
+        if($ex = Guest::all()) {
             foreach($ex as $x)
                 $x->delete();
         }
@@ -21,8 +21,8 @@ class GuestsTable extends Seeder
         $admin->surname = "Doe";
         $admin->cell = "0821234567";
         $admin->email = "admin@example.com";
-        $admin->invited = "1";
-        $admin->plus_one = "yes";
+        $admin->invited = false;
+        $admin->plus_one = "no";
         $admin->plus_one_id = "";
         $admin->rsvp = "yes";
         $admin->accommodation = "no";
@@ -34,8 +34,8 @@ class GuestsTable extends Seeder
         $admin->surname = "Doe";
         $admin->cell = "0821234567";
         $admin->email = "admin@example.com";
-        $admin->invited = "0";
-        $admin->plus_one = "yes";
+        $admin->invited = true;
+        $admin->plus_one = "no";
         $admin->plus_one_id = "";
         $admin->rsvp = "no";
         $admin->accommodation = "no";

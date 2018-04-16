@@ -162,7 +162,7 @@
     </div>
 </div>
 
-<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/sunday.png);">
+<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/sunday.jpg);">
     <div class="overlay"></div>
     <div class="container">
         <div class="row animate-box">

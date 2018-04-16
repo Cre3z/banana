@@ -6,5 +6,5 @@ use Jenssegers\Mongodb\Eloquent\Model as Model;
 
 class Todo extends Model
 {
-    //
+    protected $collection = "todos";
 }

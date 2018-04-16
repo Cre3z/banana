@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\GuestInvite;
 use App\Guest;
 
 class GuestsController extends Controller
@@ -30,9 +32,9 @@ class GuestsController extends Controller
                 $plus_one->email = $request->get("email");
                 $plus_one->cell = $request->get("cell");
                 if($request->get("rsvp") == "on"){
-                    $plus_one->invited = "1";$plus_one->rsvp = "yes";
+                    $plus_one->invited = true;$plus_one->rsvp = "yes";
                 } else {
-                    $plus_one->invited = "0";$plus_one->rsvp = "no";
+                    $plus_one->invited = false;$plus_one->rsvp = "no";
                 }
                 $plus_one->save();
             }
@@ -48,9 +50,9 @@ class GuestsController extends Controller
                 $admin->plus_one = "no"; $admin->plus_one_id = '';
             }
             if($request->get("rsvp") == "on"){
-                $admin->invited = "1";$admin->rsvp = "yes";
+                $admin->invited = true;$admin->rsvp = "yes";
             } else {
-                $admin->invited = "0";$admin->rsvp = "no";
+                $admin->invited = false;$admin->rsvp = "no";
             }
             $admin->accommodation = "";
             $admin->dietary = "";
@@ -77,9 +79,9 @@ class GuestsController extends Controller
             $plus_one->cell = $request->get("cell");
             $plus_one->email = $request->get("email");
             if($request->get("rsvp") == "on"){
-                $plus_one->invited = "1";$plus_one->rsvp = "yes";
+                $plus_one->invited = true;$plus_one->rsvp = "yes";
             } else {
-                $plus_one->invited = "0";$plus_one->rsvp = "no";
+                $plus_one->invited = false;$plus_one->rsvp = "no";
             }
             $plus_one->plus_one = "couple";
             $plus_one->save();
@@ -92,9 +94,9 @@ class GuestsController extends Controller
             $admin->plus_one = "couple";
             $admin->plus_one_id = $plus_one->id;
             if($request->get("rsvp") == "on"){
-                $admin->invited = "1";$admin->rsvp = "yes";
+                $admin->invited = true;$admin->rsvp = "yes";
             } else {
-                $admin->invited = "0";$admin->rsvp = "no";
+                $admin->invited = false;$admin->rsvp = "no";
             }
             $admin->accommodation = "";
             $admin->dietary = "";
@@ -127,9 +129,9 @@ class GuestsController extends Controller
             $plus_one->email = $request->get("email");
             $plus_one->cell = $request->get("cell");
             if($request->get("rsvp") == "on"){
-                $plus_one->invited = "1";$plus_one->rsvp = "yes";
+                $plus_one->invited = true;$plus_one->rsvp = "yes";
             } else {
-                $plus_one->invited = "0";$plus_one->rsvp = "no";
+                $plus_one->invited = false;$plus_one->rsvp = "no";
             }
             $plus_one->save();
         } else {
@@ -149,7 +151,7 @@ class GuestsController extends Controller
             $guest->plus_one = "no"; $guest->plus_one_id = '';
         }
         if($request->get("rsvp") == "on"){
-            $guest->invited = "1";$guest->rsvp = "yes";
+            $guest->invited = true;$guest->rsvp = "yes";
         }
         $guest->save();
         
@@ -200,7 +202,7 @@ class GuestsController extends Controller
     
     public function invitedJSON()
     {
-        $all = Guest::where('invited', '0')->orderBy('created_at', 'DESC')->get();
+        $all = Guest::where('invited', false)->orderBy('created_at', 'DESC')->get();
         return response()->json($all);
     }
     
@@ -211,7 +213,7 @@ class GuestsController extends Controller
     
     public function rsvpJSON()
     {
-        $all = Guest::where('invited', '1')->where('rsvp', 'yes')->get();
+        $all = Guest::where('invited', true)->where('rsvp', 'yes')->get();
         return response()->json($all);
     }
     
@@ -222,24 +224,49 @@ class GuestsController extends Controller
     
     public function pendingJSON()
     {
-        $all = Guest::where('invited', '1')->where('rsvp', 'no')->orderBy('created_at', 'DESC')->get();
+        $all = Guest::where('invited', true)->where('rsvp', 'no')->orderBy('created_at', 'DESC')->get();
         return response()->json($all);
     }
     
     public function guestsSend(Request $request)
     {
         //SEND INVITED EMAIL
-        $email = $request->get("email");
+        $id = $request->get("guest");
         
-        //COUPLE
-        $find = Guest::where('email', $email)->whereNotNull('plus_one_id')->where('plus_one', 'couple')->first();
+        //FIND Guest 
+        $find = Guest::find($id);
+        $guests = Guest::where('email', $find->email)->get();
         
-        //GUEST + PLUS ONE
-        $find = Guest::where('email', $email)->whereNotNull('plus_one_id')->where('plus_one', 'yes')->first();
+        //Couple
+        if($find->plus_one_id && $find->plus_one == "couple"){
+            foreach($guests as $found){
+                $found->invited = true; $found->save();
+            }
+        } 
+        //guest plus one
+        else if($find->plus_one_id && $find->plus_one == "yes"){
+            foreach($guests as $found){
+                $found->invited = true; $found->save();
+            }
+        } 
+        //guest no plus one
+        else if($find->plus_one == "no"){
+            $find->invited = true; $find->save();
+        } else {
+            return;
+        }
         
-        //GUEST no PLUS ONE
-        $find = Guest::where('email', $email)->whereNull('plus_one_id')->where('plus_one', 'no')->first();
-        
-        var_dump($request->get('email'));exit;
+        $this->sendEmail($find->email, $guests);
+
+    }
+    
+    function sendEmail($email, $guests) {
+        $send = Mail::to('cnortje@hotmail.com')->send(new GuestInvite($guests))->from('noreply@suzaanjovan.co.za');
+        if(!$send){
+            $find = Guest::find('email', $email)->get();
+            foreach($find as $found){
+                $found->invited = false; $found->save();
+            }
+        }
     }
 }

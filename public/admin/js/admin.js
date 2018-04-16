@@ -15,7 +15,7 @@ $(document).ready(function(){
                     $('.text_name').text(value.name);
                     $.ajax({
                       url: "/guests_send",
-                      data: {email: value.email},
+                      data: {guest: value._id},
                       method: 'post',
                       success: function(data){console.log(data);}
                     });

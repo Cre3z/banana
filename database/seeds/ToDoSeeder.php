@@ -12,6 +12,10 @@ class ToDoSeeder extends Seeder
      */
     public function run()
     {
+        if($ex = Todo::all()) {
+            foreach($ex as $x)
+                $x->delete();
+        }
         $admin = new Todo();
         $admin->name = "List One";
         $admin->subtext = "Things I have to do";
