@@ -14,28 +14,22 @@
             </div>
         </div>
         <div class="row row-bottom-padded-lg">
-            <div class="col-md-3 text-center animate-box">
+            <div class="col-md-4 text-center animate-box">
                 <div class="groom-men">
                     <img src="/website/images/groom-men-1.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
                     <h3>Ian Bill</h3>
                 </div>
             </div>
-            <div class="col-md-3 text-center animate-box">
+            <div class="col-md-4 text-center animate-box">
                 <div class="groom-men">
                     <img src="/website/images/groom-men-2.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
                     <h3>George Smith</h3>
                 </div>
             </div>
-            <div class="col-md-3 text-center animate-box">
+            <div class="col-md-4 text-center animate-box">
                 <div class="groom-men">
                     <img src="/website/images/groom-men-3.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
                     <h3>Brian Thompson</h3>
-                </div>
-            </div>
-            <div class="col-md-3 text-center animate-box">
-                <div class="groom-men">
-                    <img src="/website/images/groom-men-4.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
-                    <h3>David Howard</h3>
                 </div>
             </div>
         </div>
@@ -43,33 +37,27 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="col-md-12 text-center section-heading svg-sm colored">
                     <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
-                    <h2>The Bridesmaid</h2>
+                    <h2>The Bridesmaids</h2>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-3 text-center animate-box">
+            <div class="col-md-4 text-center animate-box">
                 <div class="groom-men">
                     <img src="/website/images/bridesmaid-1.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
                     <h3>Angel Thomas</h3>
                 </div>
             </div>
-            <div class="col-md-3 text-center animate-box">
+            <div class="col-md-4 text-center animate-box">
                 <div class="groom-men">
                     <img src="/website/images/bridesmaid-2.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
                     <h3>Kathy Shol</h3>
                 </div>
             </div>
-            <div class="col-md-3 text-center animate-box">
+            <div class="col-md-4 text-center animate-box">
                 <div class="groom-men">
                     <img src="/website/images/bridesmaid-3.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
                     <h3>Rose Mel</h3>
-                </div>
-            </div>
-            <div class="col-md-3 text-center animate-box">
-                <div class="groom-men">
-                    <img src="/website/images/bridesmaid-4.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
-                    <h3>Ann Hathway</h3>
                 </div>
             </div>
         </div>
