@@ -1,4 +1,4 @@
-@if($guests_invite)
+@if(isset($guests_invite))
 <div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/invited.jpg);background-position: center;">
     <div class="overlay"></div>
     <div class="container">
@@ -126,6 +126,7 @@
 </div>
 @endif
 
+@if(isset($event))
 <div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/friday.jpg);background-position: center;">
     <div class="overlay"></div>
     <div class="container">
@@ -165,7 +166,8 @@
         </div>
     </div>
 </div>
-
+@endif
+@if(isset($event))
 <div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/sunday.jpg);background-position: center;">
     <div class="overlay"></div>
     <div class="container">
@@ -205,3 +207,4 @@
         </div>
     </div>
 </div>
+@endif

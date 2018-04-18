@@ -42,7 +42,7 @@ class HomeController extends Controller
     
     public function getEvent(Request $request)
     {
-        $guests = Guest::where('token', $request->token)->get();
-        return view('welcome', ['guests_invite' => $guests]);
+        $event = Event::where('token', $request->token)->first();
+        return view('welcome', ['event' => $event]);
     }
 }
