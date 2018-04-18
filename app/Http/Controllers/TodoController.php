@@ -30,6 +30,12 @@ class TodoController extends Controller
       $id = $request->get('id');
       $todo = Todo::find($id);
       $todo->delete();
+        
+    if($todo->event){
+        $event = Event::find($todo->event);
+        $event->todo = 0;
+        $event->save();
+    }
       return redirect('/todo');
     }
 

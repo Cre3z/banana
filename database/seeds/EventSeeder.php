@@ -26,7 +26,7 @@ class EventSeeder extends Seeder
       $event->comments = [
         ['body'=> "this is a test", "user"=> 1, 'name'=> 'Admin', 'datetime'=> '2018-05-04 16:34']
       ];
-      $event->todo = 1;
+      $event->todo = null;
       $event->type = 'naughty';
       $event->secret = true;
       $event->save();
