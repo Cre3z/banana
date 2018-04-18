@@ -18,17 +18,17 @@
         <div class="row animate-box">
             <div class="col-md-10 col-md-offset-1">
                 @if(!(count($guests_invite) > 1))
-                <form class="form-inline">
+                <form class="form-inline" method="post" action="/guests_rsvp/{{ $token }}">
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group">
                             <label for="name" class="sr-only">Name</label>
-                            <input type="name" class="form-control" id="name" placeholder="Name" value="{{ $guests_invite[0]->name }}" required>
+                            <input type="name" class="form-control" id="name" placeholder="Name" value="{{ $guests_invite[0]->name }}" required name="name">
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group">
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email" value="{{ $guests_invite[0]->email }}" required>
+                            <input type="email" class="form-control" id="email" placeholder="Email" value="{{ $guests_invite[0]->email }}" required name="email">
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
@@ -36,29 +36,29 @@
                     </div>
                 </form>
                 @else
-                <form class="form-inline">
+                <form class="form-inline" method="post" action="/guests_rsvp/{{ $token }}">
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="name" class="sr-only">Name</label>
-                            <input type="name" class="form-control" id="name" placeholder="Your Name" value="{{ $guests_invite[1]->name }}" required>
+                            <input type="name" class="form-control" id="name" placeholder="Your Name" value="{{ $guests_invite[1]->name }}" required name="name[]">
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Your Email" value="{{ $guests_invite[1]->email }}" required>
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" value="{{ $guests_invite[1]->email }}" required name="email">
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="name" class="sr-only">Name</label>
-                            <input type="name" class="form-control" id="name" placeholder="Your Plus One Name">
+                            <input type="name" class="form-control" id="name_2" placeholder="Your Plus One Name" value="{{ $guests_invite[0]->name }}" name="name[]">
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="email" class="sr-only">Surname</label>
-                            <input type="email" class="form-control" id="email" placeholder="Your Plus One Surname">
+                            <input type="text" class="form-control" id="surname" placeholder="Your Plus One Surname" value="{{ $guests_invite[0]->surname }}" name="surname">
                         </div>
                     </div>
                     <div class="col-sm-12">
@@ -149,13 +149,13 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group">
                             <label for="name" class="sr-only">Name</label>
-                            <input type="name" class="form-control" id="name" placeholder="Name">
+                            <input type="name" class="form-control" id="name" placeholder="Name" name="name">
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group">
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <input type="email" class="form-control" id="email" placeholder="Email" name="email">
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
@@ -190,13 +190,13 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group">
                             <label for="name" class="sr-only">Name</label>
-                            <input type="name" class="form-control" id="name" placeholder="Name">
+                            <input type="name" class="form-control" id="name" placeholder="Name" name="name">
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group">
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <input type="email" class="form-control" id="email" placeholder="Email" name="email">
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">

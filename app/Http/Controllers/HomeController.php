@@ -38,7 +38,7 @@ class HomeController extends Controller
     public function getGuest(Request $request)
     {
         $guests = Guest::where('token', $request->token)->get();
-        return view('welcome', ['guests_invite' => $guests]);
+        return view('welcome', ['guests_invite' => $guests, 'token'=>$request->token]);
     }
     
     public function getEvent(Request $request)
@@ -49,9 +49,41 @@ class HomeController extends Controller
     
     public function contactUs(Request $request)
     {
-        $gEmail     = $request->email;
-        $gName      = $request->name;
-        $gMessage   = $request->message;
+        $gEmail     = $request->get('email');
+        $gName      = $request->get('name');
+        $gMessage   = $request->get('message');
         $send = Mail::to('cnortje@hotmail.com')->send(new Contact($gName, $gEmail, $gMessage))->from('noreply@suzaanjovan.co.za');
+    }
+    
+    public function guestRSVP(Request $request)
+    {
+        $token = $request->token;
+        $guests = Guest::where('token', $request->token)->count();
+        
+        //couple or guest + plus one
+        if($guests && count($guests > 1)){
+            $guest_couple = Guest::where('token', $request->token)->get();
+            foreach($guest_couple as $key=>$couple){
+                if($couple->plus_one == "couple")
+                    $couple->name = $request->get('name')[$key];
+                    $couple->surname = $request->get('surname');
+                    $couple->email = $request->get('email');
+                    $couple->invited = true;
+                    $couple->rsvp = "yes";
+                    $couple->save();
+                } else {
+                    
+                }
+            }
+        } 
+        //single guest
+        else if($guests && count($guests <= 1)){
+            $guest = Guest::where('token', $request->token)->first();
+            $guest->name = $request->get('name');
+            $guest->email = $request->get('email');
+            $guest->invited = true;
+            $guest->rsvp = "yes";
+            $guest->save();
+        }
     }
 }
