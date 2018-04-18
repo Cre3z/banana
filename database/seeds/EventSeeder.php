@@ -29,6 +29,7 @@ class EventSeeder extends Seeder
       $event->todo = null;
       $event->type = 'naughty';
       $event->secret = true;
+      $event->token = '123456';
       $event->save();
     }
 }

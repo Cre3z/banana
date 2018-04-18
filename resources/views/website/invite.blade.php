@@ -1,4 +1,4 @@
-@if(isset($guests_invite))
+@if(isset($guests_invite) && ($guests_invite[0]->rsvp == "no"))
 <div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/invited.jpg);background-position: center;">
     <div class="overlay"></div>
     <div class="container">
@@ -22,13 +22,13 @@
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group">
                             <label for="name" class="sr-only">Name</label>
-                            <input type="name" class="form-control" id="name" placeholder="Name">
+                            <input type="name" class="form-control" id="name" placeholder="Name" value="{{ $guests_invite[0]->name }}" required>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group">
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email">
+                            <input type="email" class="form-control" id="email" placeholder="Email" value="{{ $guests_invite[0]->email }}" required>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
@@ -40,13 +40,13 @@
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="name" class="sr-only">Name</label>
-                            <input type="name" class="form-control" id="name" placeholder="Your Name">
+                            <input type="name" class="form-control" id="name" placeholder="Your Name" value="{{ $guests_invite[1]->name }}" required>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Your Email">
+                            <input type="email" class="form-control" id="email" placeholder="Your Email" value="{{ $guests_invite[1]->email }}" required>
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
@@ -57,7 +57,7 @@
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
-                            <label for="email" class="sr-only">Email</label>
+                            <label for="email" class="sr-only">Surname</label>
                             <input type="email" class="form-control" id="email" placeholder="Your Plus One Surname">
                         </div>
                     </div>
