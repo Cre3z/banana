@@ -1,3 +1,4 @@
+@if($guests_invite)
 <div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/invited.jpg);background-position: center;">
     <div class="overlay"></div>
     <div class="container">
@@ -16,6 +17,7 @@
         </div>
         <div class="row animate-box">
             <div class="col-md-10 col-md-offset-1">
+                @if(!(count($guests_invite) > 1))
                 <form class="form-inline">
                     <div class="col-md-4 col-sm-12">
                         <div class="form-group">
@@ -33,7 +35,7 @@
                         <button type="submit" class="btn btn-default btn-block">I am Attending</button>
                     </div>
                 </form>
-                
+                @else
                 <form class="form-inline">
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
@@ -67,11 +69,12 @@
                         <button type="submit" class="btn btn-default btn-block">We are Attending</button>
                     </div>
                 </form>
+                @endif
             </div>
         </div>
     </div>
 </div>
-
+@else
 <div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/contact_us.jpg);background-position: center;">
     <div class="overlay"></div>
     <div class="container">
@@ -121,6 +124,7 @@
         </div>
     </div>
 </div>
+@endif
 
 <div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/friday.jpg);background-position: center;">
     <div class="overlay"></div>

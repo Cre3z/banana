@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/{token}', 'HomeController@getGuest')->name('guests_invite_token');
+
 Auth::routes();
 
 Route::group(['middleware' => 'admin'], function() {

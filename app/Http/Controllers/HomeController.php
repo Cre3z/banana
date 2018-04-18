@@ -33,4 +33,16 @@ class HomeController extends Controller
         $todo = Todo::where('user', Auth::user()->email)->where('public', true)->first();
         return view('home', ['invites_sent'=>$invites_sent, 'guest_total'=>$guest_total, 'rsvp_invites'=>$rsvp_invites, 'out_invites'=>$out_invites, 'todo'=>$todo]);
     }
+    
+    public function getGuest(Request $request)
+    {
+        $guests = Guest::where('token', $request->token)->get();
+        return view('welcome', ['guests_invite' => $guests]);
+    }
+    
+    public function getEvent(Request $request)
+    {
+        $guests = Guest::where('token', $request->token)->get();
+        return view('welcome', ['guests_invite' => $guests]);
+    }
 }
