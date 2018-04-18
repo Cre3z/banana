@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Guest;
 use App\Todo;
+use App\Mail\Contact;
 use Auth;
 
 class HomeController extends Controller
@@ -48,7 +49,9 @@ class HomeController extends Controller
     
     public function contactUs(Request $request)
     {
-        $event = Event::where('token', $request->token)->first();
-        return view('welcome', ['event' => $event]);
+        $gEmail     = $request->email;
+        $gName      = $request->name;
+        $gMessage   = $request->message;
+        $send = Mail::to('cnortje@hotmail.com')->send(new Contact($gName, $gEmail, $gMessage))->from('noreply@suzaanjovan.co.za');
     }
 }
