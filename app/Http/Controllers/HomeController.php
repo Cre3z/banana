@@ -45,4 +45,10 @@ class HomeController extends Controller
         $event = Event::where('token', $request->token)->first();
         return view('welcome', ['event' => $event]);
     }
+    
+    public function contactUs(Request $request)
+    {
+        $event = Event::where('token', $request->token)->first();
+        return view('welcome', ['event' => $event]);
+    }
 }

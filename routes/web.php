@@ -16,6 +16,8 @@ Route::get('/', function () {
 });
 
 Route::get('/{token}', 'HomeController@getGuest')->name('guests_invite_token');
+Route::get('/{event_id}/{token}', 'HomeController@getEvent')->name('guests_events');
+Route::post('/contact', 'HomeController@contactUs')->name('contact_us');
 
 Auth::routes();
 

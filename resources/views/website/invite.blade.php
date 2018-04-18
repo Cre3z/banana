@@ -93,7 +93,7 @@
         </div>
         <div class="row animate-box">
             <div class="col-md-10 col-md-offset-1">
-                <form class="form-inline">
+                <form class="form-inline" action="/contact" method="post">
                     
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
