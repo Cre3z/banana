@@ -3,7 +3,7 @@
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2">
                 <div class="col-md-12 text-center section-heading svg-sm-2 colored">
-                    <img src="/website/images/flaticon/svg/002-wedding-couple.svg" class="svg" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
+                    <img src="/website/images/flaticon/svg/002-wedding-couple.svg" class="svg" alt="">
                     <h2>Groom &amp; Bride</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, sequi, minima repellendus explicabo magni aperiam, ducimus perferendis ad quidem suscipit omnis unde veritatis pariatur. Commodi, nisi. Iusto, accusantium a.</p>
                 </div>

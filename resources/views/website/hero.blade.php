@@ -1,7 +1,7 @@
 <aside id="qbootstrap-slider-hero" data-section="home">
     <div class="flexslider">
         <ul class="slides">
-        <li style="background-image: url(website/images/cover_bg_3.jpg);">
+        <li style="background-image: url(website/images/cover_bg_3.jpg);background-position: center;">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">

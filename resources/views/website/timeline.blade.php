@@ -3,7 +3,7 @@
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2">
                 <div class="col-md-12 text-center section-heading svg-sm-2">
-                    <img src="/website/images/flaticon/svg/003-luxury.svg" class="svg" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
+                    <img src="/website/images/flaticon/svg/003-luxury.svg" class="svg" alt="">
                     <h2>Our Love Story</h2>
                 </div>
             </div>

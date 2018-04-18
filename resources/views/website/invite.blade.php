@@ -1,4 +1,4 @@
-<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/invited.jpg);">
+<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/invited.jpg);background-position: center;">
     <div class="overlay"></div>
     <div class="container">
         <div class="row animate-box">
@@ -72,13 +72,13 @@
     </div>
 </div>
 
-<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/contact_us.jpg);">
+<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/contact_us.jpg);background-position: center;">
     <div class="overlay"></div>
     <div class="container">
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2">
                 <div class="col-md-12 text-center section-heading svg-sm colored">
-                    <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
+                    <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="">
                     <h2>Contact Us</h2>
                     <div class="row">
                     <div class="col-md-10 col-md-offset-1 subtext">
@@ -122,13 +122,13 @@
     </div>
 </div>
 
-<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/friday.jpg);">
+<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/friday.jpg);background-position: center;">
     <div class="overlay"></div>
     <div class="container">
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2">
                 <div class="col-md-12 text-center section-heading svg-sm colored">
-                    <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
+                    <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="">
                     <h2>Friday</h2>
                     <div class="row">
                     <div class="col-md-10 col-md-offset-1 subtext">
@@ -162,13 +162,13 @@
     </div>
 </div>
 
-<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/sunday.jpg);">
+<div id="qbootstrap-started" class="qbootstrap-bg" data-section="rsvp" style="background-image: url(website/images/sunday.jpg);background-position: center;">
     <div class="overlay"></div>
     <div class="container">
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2">
                 <div class="col-md-12 text-center section-heading svg-sm colored">
-                    <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
+                    <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="">
                     <h2>Sunday</h2>
                     <div class="row">
                     <div class="col-md-10 col-md-offset-1 subtext">
