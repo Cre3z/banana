@@ -27,6 +27,7 @@ class GuestsTable extends Seeder
         $admin->rsvp = "yes";
         $admin->accommodation = "no";
         $admin->dietary = "vegan";
+        $admin->token = "";
         $admin->save();
         
         $admin = new Guest();
@@ -40,6 +41,7 @@ class GuestsTable extends Seeder
         $admin->rsvp = "no";
         $admin->accommodation = "no";
         $admin->dietary = "";
+        $admin->token = "";
         $admin->save();
     }
 }

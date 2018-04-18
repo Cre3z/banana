@@ -8,5 +8,5 @@ class Guest extends Model
 {
     protected $collection = "guests";
     
-    public $fillable = ['name', 'surname', 'cell', 'email', 'invited', 'plus_one', 'rsvp', 'accommodation', 'dietary'];
+    public $fillable = ['name', 'surname', 'cell', 'email', 'invited', 'plus_one', 'rsvp', 'accommodation', 'dietary', 'token'];
 }

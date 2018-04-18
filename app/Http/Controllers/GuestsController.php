@@ -240,18 +240,24 @@ class GuestsController extends Controller
         //Couple
         if($find->plus_one_id && $find->plus_one == "couple"){
             foreach($guests as $found){
-                $found->invited = true; $found->save();
+                $found->invited = true; 
+                $found->token = $this->generateRandomString();
+                $found->save();
             }
         } 
         //guest plus one
         else if($find->plus_one_id && $find->plus_one == "yes"){
             foreach($guests as $found){
-                $found->invited = true; $found->save();
+                $found->invited = true; 
+                $found->token = $this->generateRandomString();
+                $found->save();
             }
         } 
         //guest no plus one
         else if($find->plus_one == "no"){
-            $find->invited = true; $find->save();
+            $find->invited = true; 
+            $find->token = $this->generateRandomString();
+            $find->save();
         } else {
             return;
         }
@@ -268,5 +274,15 @@ class GuestsController extends Controller
                 $found->invited = false; $found->save();
             }
         }
+    }
+    
+    function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
     }
 }

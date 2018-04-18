@@ -17,7 +17,7 @@
 
         <div class="row">
 
-            @foreach($all as $one)
+            @foreach($all as $key=>$one)
             <div class="col-lg-6 col-md-12">
                 <a href="#">
                     <div class="card card-nav-tabs">
