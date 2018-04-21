@@ -15,17 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-
 Route::get('/mailable', function () {
     $guest = App\Guest::where('email', 'admin@example.com')->get();
     return new App\Mail\GuestInvite($guest);
 });
-
-Route::get('/{token}', 'HomeController@getGuest')->name('guests_invite_token');
-Route::get('/{event_id}/{token}', 'HomeController@getEvent')->name('guests_events');
-Route::get('/guests_rsvp/{token}', 'HomeController@guestRSVP')->name('guests_rsvp');
-Route::post('/contact', 'HomeController@contactUs')->name('contact_us');
 
 Auth::routes();
 
@@ -86,4 +79,11 @@ Route::group(['middleware' => 'admin'], function() {
     Route::get('/logout',  'UserController@logout');
     Route::get('/register',  'HomeController@index');
 
+});
+
+Route::group(['middleware' => 'guest'], function() {
+    Route::get('/{token}', 'HomeController@getGuest')->name('guests_invite_token');
+    Route::get('/{event_id}/{token}', 'HomeController@getEvent')->name('guests_events');
+    Route::get('/guests_rsvp/{token}', 'HomeController@guestRSVP')->name('guests_rsvp');
+    Route::post('/contact', 'HomeController@contactUs')->name('contact_us');
 });
