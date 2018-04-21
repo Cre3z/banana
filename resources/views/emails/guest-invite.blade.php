@@ -10,7 +10,7 @@
     <style type="text/css">
     table { width: 100%; max-width: 800px; margin: 0 auto; border-style: solid; border-width: 1px; border-color: #ccc;}
     .tg  {border-collapse:collapse;border-spacing:0;}
-    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;overflow:hidden;word-break:normal;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;overflow:hidden;word-break:normal;}
     .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;overflow:hidden;word-break:normal;}
     .hero { background-image: url(website/images/cover_bg_3.jpg);background-position: center; height: 350px; color: #fff; position: relative;}
     .footer {background-position: top; height: 100px; position: relative;background-color: #001f54;}
@@ -29,6 +29,9 @@
     text-transform: uppercase;
     font-weight: 400; padding: 20px 40px; border-radius: 6px; text-decoration: none;}
     .link { text-align: center; height: 100px;}
+    h2 { font-size: 2em; text-align: center;}
+    .heading { padding: 20px 10px;}
+    .info { padding: 20px 10px;}
     </style>
 </head>
 <body>
@@ -37,23 +40,34 @@
       <tr>
         <th class="tg-yw4l hero">
             <div class="overlay-text">
-                <h1 class="holder"><span>The Wedding of</span> Suzaan &amp; Jovan</h1>
+                <h1 class="holder"><span>Die Huweliksbesvestiging van</span> Suzaan &amp; Jovan</h1>
             </div>
         </th>
       </tr>
       <tr>
-        <td class="tg-yw4l">
-            <h2>You are invited!</h2>
+        <td class="tg-yw4l heading">
+            <h2>Jy/Julle is uitgenooi!</h2>
         </td>
       </tr>
       <tr>
-        <td class="tg-yw4l">
-            <p>Ultricies, similique ipsam earum, architecto accusamus iusto non ante! Officiis laboris tempore leo debitis, felis dolorum est dignissim! Fermentum harum aptent! Harum, wisi distinctio, nec excepturi cumque iste, aliquam ullamcorper, praesent sunt cursus, eligendi cumque, cum quasi quas repudiandae id, facere fusce? Do nostra augue habitant pulvinar tortor! Pellentesque natus ullam ut iusto accusantium integer ac, praesentium auctor sollicitudin est cillum temporibus, interdum, delectus, necessitatibus deleniti? Luctus odio consectetuer iure, wisi ultricies, aliquid imperdiet, in non consequat explicabo, voluptatibus quas provident leo fermentum nascetur? Massa lacinia nihil mus? Porro temporibus! Aute venenatis, occaecati quidem, iure quis iaculis magni elementum, aut.</p>
+        <td class="tg-yw4l info">
+            <p>Beste Jannie</p>
+            <p>Ons nooi jou hartlik uit om ons spesiale dag saam met ons te deel! </p>
+            <p><strong>Datum: </strong> 15 Desember 2018</p>
+            <p><strong>Tyd: </strong> 16:00 vir 16:30</p>
+            <p><strong>Waar: </strong> 28 Kerkstraat, Tulbagh, oorkant Little Courtyards.</p>
+            <p><strong>RSVP: </strong> 15 Augustus 2018</p>
+            <p><strong>Nota: </strong> Jammer, geen kinders.</p>
+            <p>Aangesien daar waterbeperkings is en ons dus nie meer ons bome kan water gee nie, is daar minder bome beskikbaar vir papier uitnodigings. So, in ons strewe om die natuur te help beskerm het ons besluit om ons uitnodigings digitaal te maak. Volg die onderstaande skakel wat na ons trou webblad gaan, jou uitnodiging kan aan die heel onderkant gevind word. Ons het dit vir jou maklik gemaak en reeds al jou besondehede ingevul, so al wat jy moet doen is die inligiting bevestig en die uitnodiging aanvaar. </p>
+            <p>Jou uitnodiging sluit 'n metgesel in. Ons vra dat jy jou metgesel se naam en van verskaf indien jy die uitnodiging so aanvaar. In die geval dat jy onseker is wie jou metgesel gaan wees, los asseblief die verskafte bewoording in die spasie en bevestig met Suzaan teen 1 November 2018 wie jou metgesel gaan wees. Indien jy nie 'n metgesel gaan bring nie, kies asseblief die "geen metgesel" opsie op die uitnodiging.</p>
+            <p>Indien jy enige navrae het, kontak gerus vir Cecilia van Zyl <strong>081 390 6814</strong> of vir Suzaan van Zyl by <strong>072 434 3546</strong>. Jy kan ook met ons in kontak tree via die webwerf.</p>
+            <p>Volg asseblief die onderstaande skakel om die uitnodiging te besigtig.</p>
+            
         </td>
       </tr>
       <tr>
         <td class="tg-yw4l link">
-            <a class="btn btn-default" href="">View Invitation</a>
+            <a class="btn btn-default" href="/{{ $guests[1]->token }}">Besigtig uitnodiging</a>
             <br>
         </td>
       </tr>

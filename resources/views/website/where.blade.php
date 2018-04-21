@@ -4,11 +4,13 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="col-md-12 text-center section-heading svg-sm colored">
                     <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="">
-                    <h2>Ceremony &amp; Party</h2>
+                    <h2>Seremonie &amp; Onthaal</h2>
                     <div class="row">
+<!--
                     <div class="col-md-10 col-md-offset-1 subtext">
                         <h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
                     </div>
+-->
                 </div>
                 </div>
             </div>
@@ -18,7 +20,7 @@
                 <div class="wedding-events">
                     <div class="ceremony-bg" style="background-image: url(website/images/ceremony.jpg);"></div>
                     <div class="desc">
-                        <h3>Wedding Ceremony</h3>
+                        <h3>Huweliks Seremonie</h3>
                         <div class="row">
                             <div class="col-md-2 col-md-push-5">
                                 <div class="icon-tip">
@@ -28,15 +30,14 @@
                             <div class="col-md-5 col-md-pull-1">
                                 <div class="date">
                                     <i class="icon-calendar"></i>
-                                    <span>Saturday</span>
-                                    <span>02 Dec. 2017</span>
+                                    <span>Saterdag</span>
+                                    <span>15 Des. 2018</span>
                                 </div>
                             </div>
                             <div class="col-md-5 col-md-pull-1">
                                 <div class="date">
                                     <i class="icon-clock2"></i>
-                                    <span>10:00 AM</span>
-                                    <span>11:00 AM</span>
+                                    <span>16:00 NM vir <br>16:30 NM</span>
                                 </div>
                             </div>
                         </div>
@@ -49,7 +50,7 @@
                 <div class="wedding-events">
                     <div class="ceremony-bg" style="background-image: url(website/images/reception.jpg);"></div>
                     <div class="desc">
-                        <h3>Wedding Party</h3>
+                        <h3>Onthaal</h3>
                         <div class="row">
                             <div class="col-md-2 col-md-push-5">
                                 <div class="icon-tip">
@@ -59,15 +60,15 @@
                             <div class="col-md-5 col-md-pull-1">
                                 <div class="date">
                                     <i class="icon-calendar"></i>
-                                    <span>Saturday</span>
-                                    <span>02 Dec. 2017</span>
+                                    <span>Saterdag</span>
+                                    <span>15 Des. 2018</span>
                                 </div>
                             </div>
                             <div class="col-md-5 col-md-pull-1">
                                 <div class="date">
                                     <i class="icon-clock2"></i>
-                                    <span>10:00 AM</span>
-                                    <span>11:00 AM</span>
+                                    <span>17:00 NM</span>
+                                    <span>23:00 NM</span>
                                 </div>
                             </div>
                         </div>

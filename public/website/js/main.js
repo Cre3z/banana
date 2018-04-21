@@ -274,15 +274,15 @@
 		// + minutes + "Minutes " + seconds + "Seconds ";
 
 		// Display the result in an element with id="demo"
-		document.getElementById("days").innerHTML = days +" <small>days</small>";
-		document.getElementById("hours").innerHTML = hours + " <small>hours</small> ";
-		document.getElementById("minutes").innerHTML = minutes + " <small>minutes</small> ";
-		document.getElementById("seconds").innerHTML = seconds + " <small>seconds</small> ";
+		document.getElementById("days").innerHTML = days +" <small>dae</small>";
+		document.getElementById("hours").innerHTML = hours + " <small>ure</small> ";
+		document.getElementById("minutes").innerHTML = minutes + " <small>minute</small> ";
+		document.getElementById("seconds").innerHTML = seconds + " <small>sekondes</small> ";
 
 		// If the count down is finished, write some text 
 		if (distance < 0) {
 		 clearInterval(x);
-		 document.getElementById("demo").innerHTML = "The Wedding Ceremony is Over";
+		 document.getElementById("demo").innerHTML = "Dis sulke tyd!";
 		}
 		}, 1000);	
 	

@@ -4,27 +4,27 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="col-md-12 text-center section-heading svg-sm-2 colored">
                     <img src="/website/images/flaticon/svg/002-wedding-couple.svg" class="svg" alt="">
-                    <h2>Groom &amp; Bride</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam accusamus, sequi, minima repellendus explicabo magni aperiam, ducimus perferendis ad quidem suscipit omnis unde veritatis pariatur. Commodi, nisi. Iusto, accusantium a.</p>
+                    <h2>Bruid &amp; Bruidegom</h2>
+                    <p>Ons komplimenteer mekaar, J&#243;van is 'n regte 'jack-in-the-box' veldmuis en Suzaan die huismuis. Saam deel ons introvertiese en ekstrovertiese eienskappe. Ons geniet gesellige tye saam met ons vriende, of dit nou buite is om die braaivuur of binne rondom die koffie tafel.</p>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <div class="couple groom text-center animate-box">
-                    <img src="/website/images/groom.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
+                <div class="couple bride text-center animate-box">
+                    <img src="/website/images/suzaan.jpg" class="img-responsive" alt="">
                     <div class="desc">
-                        <h2>Louie Jie L. Mahusay</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda vero totam eum, necessitatibus reprehenderit nisi, ratione neque aspernatur sapiente minus? Omnis neque labore distinctio aspernatur esse impedit laboriosam, veritatis dolorem!</p>
+                        <h2>Suzaan van Zyl</h2>
+                        <p>Suzanabanana is 'n onderwyseres en sy is die beter helfte van J&#243;van. Sy wil so veel as moontlik by die huis wees saam haar familie met 'n beker koffie (Villamar) en 'n goeie fliekreeks. Sy is die beplanner, die uitvoerder en die stresbolletjie, maar terseldertyd die liefdevolste mens.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="couple bride text-center animate-box">
-                    <img src="/website/images/bride.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
+                <div class="couple groom text-center animate-box">
+                    <img src="/website/images/groom.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
                     <div class="desc">
-                        <h2>Marializa R. Tabay</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda vero totam eum, necessitatibus reprehenderit nisi, ratione neque aspernatur sapiente minus? Omnis neque labore distinctio aspernatur esse impedit laboriosam, veritatis dolorem!</p>
+                        <h2>J&#243;van Jordaan</h2>
+                        <p>Die man is kort, die man is rats, die man is vinnig. J&#243;van is besig met sy leerling rekenmeester klerkskap en is tans in sy finale jaar. J&#243;van is onder andere ook 'n gekwalifisserde krieket afrigter en die grootste sport entoesias wat bestaan. Hy bly fiks, gemotiveerd en is altyd positief met 'n grappie of tien in die mou.</p>
                     </div>
                 </div>
             </div>

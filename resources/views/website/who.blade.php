@@ -13,15 +13,15 @@
         <div class="row animate-box">
             <div class="col-md-8 col-md-offset-2 text-center">
                 <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-                    <img src="/website/images/groom.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
-                    <h3>Louie Jie L. Mahusay</h3>
-                    <span>Groom</span>
+                    <img src="/website/images/groom.jpg" class="img-responsive" alt="">
+                    <h3>J&#243;van Jordaan</h3>
+                    <span>Bruidegom</span>
                 </div>
-                <div class="col-md-2 col-sm-2 col-xs-2 nopadding"><h2 class="amp-center"><img src="/website/images/flaticon/svg/003-luxury.svg" class="svg img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com"></h2></div>
+                <div class="col-md-2 col-sm-2 col-xs-2 nopadding"><h2 class="amp-center"><img src="/website/images/flaticon/svg/003-luxury.svg" class="svg img-responsive" alt=""></h2></div>
                 <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
-                    <img src="/website/images/bride.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
-                    <h3>Marializa R. Tabay</h3>
-                    <span>Bride</span>
+                    <img src="/website/images/suzaan.jpg" class="img-responsive" alt=""> 
+                    <h3>Suzaan van Zyl</h3>
+                    <span>Bruid</span>
                 </div>
             </div>
         </div>

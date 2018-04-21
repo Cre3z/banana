@@ -5,8 +5,8 @@
             <div class="row animate-box">
                 <div class="col-md-12 section-heading text-center svg-sm colored">
                     <img src="/website/images/flaticon/svg/006-flower-bell-outline-design-variant-with-vines-and-leaves.svg" class="svg" alt="">
-                    <h2 class="">The Wedding Day</h2>
-                    <span class="datewed">Saterdag, Dec. 15, 2018</span>
+                    <h2 class="">Die Trou Dag</h2>
+                    <span class="datewed">Saterdag, Des. 15, 2018</span>
                 </div>
             </div>
             <div class="row animate-box">
