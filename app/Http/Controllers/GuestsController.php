@@ -239,17 +239,19 @@ class GuestsController extends Controller
         
         //Couple
         if($find->plus_one_id && $find->plus_one == "couple"){
+            $token = $this->generateRandomString();
             foreach($guests as $found){
                 $found->invited = true; 
-                $found->token = $this->generateRandomString();
+                $found->token = $token;
                 $found->save();
             }
         } 
         //guest plus one
         else if($find->plus_one_id && $find->plus_one == "yes"){
+            $token = $this->generateRandomString();
             foreach($guests as $found){
                 $found->invited = true; 
-                $found->token = $this->generateRandomString();
+                $found->token = $token;
                 $found->save();
             }
         } 

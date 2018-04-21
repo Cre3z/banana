@@ -6,10 +6,10 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="col-md-12 text-center section-heading svg-sm colored">
                     <img src="/website/images/flaticon/svg/005-two.svg" class="svg" alt="">
-                    <h2>You Are Invited</h2>
+                    <h2>Jy is genooi!</h2>
                     <div class="row">
                     <div class="col-md-10 col-md-offset-1 subtext">
-                        <h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>
+<!--                        <h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>-->
                     </div>
                 </div>
                 </div>
@@ -19,20 +19,23 @@
             <div class="col-md-10 col-md-offset-1">
                 @if(!(count($guests_invite) > 1))
                 <form class="form-inline" method="post" action="/guests_rsvp/{{ $token }}">
-                    <div class="col-md-4 col-sm-12">
+                    <div class="col-md-3 col-sm-12">
                         <div class="form-group">
                             <label for="name" class="sr-only">Name</label>
-                            <input type="name" class="form-control" id="name" placeholder="Name" value="{{ $guests_invite[0]->name }}" required name="name">
+                            <input type="name" class="form-control" id="name" placeholder="Naam" value="{{ $guests_invite[0]->name }}" required name="name">
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-12">
+                    <div class="col-md-3 col-sm-12">
                         <div class="form-group">
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email" value="{{ $guests_invite[0]->email }}" required name="email">
+                            <input type="email" class="form-control" id="email" placeholder="E-pos" value="{{ $guests_invite[0]->email }}" required name="email">
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
-                        <button type="submit" class="btn btn-default btn-block">I am Attending</button>
+                        <button type="submit" class="btn btn-default btn-block">Ja, ek is op pad.</button>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <button type="submit" class="btn btn-grey btn-block"><span class="glyphicon glyphicon-remove"></span></button>
                     </div>
                 </form>
                 @else
@@ -40,33 +43,42 @@
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="name" class="sr-only">Name</label>
-                            <input type="name" class="form-control" id="name" placeholder="Your Name" value="{{ $guests_invite[1]->name }}" required name="name[]">
+                            <input type="name" class="form-control" id="name" placeholder="Jou Naam" value="{{ $guests_invite[1]->name }}" required name="name[]">
                         </div>
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Your Email" value="{{ $guests_invite[1]->email }}" required name="email">
+                            <input type="email" class="form-control" id="email" placeholder="Jou e-pos" value="{{ $guests_invite[1]->email }}" required name="email">
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6 col-sm-12 partner">
                         <div class="form-group">
                             <label for="name" class="sr-only">Name</label>
-                            <input type="name" class="form-control" id="name_2" placeholder="Your Plus One Name" value="{{ $guests_invite[0]->name }}" name="name[]">
+                            <input type="name" class="form-control" id="name_2" placeholder="Jou metgesel se Naam" value="{{ $guests_invite[0]->name }}" name="name[]">
                         </div>
                     </div>
-                    <div class="col-md-6 col-sm-12">
+                    <div class="col-md-6 col-sm-12 partner">
                         <div class="form-group">
                             <label for="email" class="sr-only">Surname</label>
-                            <input type="text" class="form-control" id="surname" placeholder="Your Plus One Surname" value="{{ $guests_invite[0]->surname }}" name="surname">
+                            <input type="text" class="form-control" id="surname" placeholder="Jou metgesel se van" value="{{ $guests_invite[0]->surname }}" name="surname">
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <h3 class="white">Please Note: If you leave your plus one's name blank, we will assume that you are not bringing a plus one.</h3>
+                        <div class="control-group">
+                            <label class="control control-checkbox">
+                                Geen metgesel.
+                                <input type="checkbox" name="no_partner" id="alone"/>
+                                <div class="control_indicator"></div>
+                            </label>
+                        </div>
                     </div>
                     <div class="clearfix"></div><br>
-                    <div class="col-md-6 col-md-offset-3 col-sm-12">
-                        <button type="submit" class="btn btn-default btn-block">We are Attending</button>
+                    <div class="col-md-4 col-md-offset-6 col-sm-12">
+                        <button type="submit" class="btn btn-default btn-block">Ja, ek is op pad.</button>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <button type="submit" class="btn btn-grey btn-block"><span class="glyphicon glyphicon-remove"></span></button>
                     </div>
                 </form>
                 @endif

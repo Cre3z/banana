@@ -306,5 +306,10 @@
 		inlineSVG();
 		bgVideo();
 	});
+    
+    //alone checkbox
+    $('#alone').on('change', function(){
+       $('.partner').slideToggle(); 
+    });
 
 }());
