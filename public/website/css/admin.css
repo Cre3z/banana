@@ -20,6 +20,7 @@
     padding-top: 0px;
     cursor: pointer;
     color: #fff;
+    font-weight: 200;
 }
     .control input {
         position: absolute;

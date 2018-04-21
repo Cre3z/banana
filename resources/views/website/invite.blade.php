@@ -9,7 +9,7 @@
                     <h2>Jy is genooi!</h2>
                     <div class="row">
                     <div class="col-md-10 col-md-offset-1 subtext">
-<!--                        <h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>-->
+                        <h3>RSVP: 15 Augustus 2018</h3>
                     </div>
                 </div>
                 </div>
