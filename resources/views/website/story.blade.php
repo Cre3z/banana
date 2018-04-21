@@ -5,7 +5,7 @@
                 <div class="col-md-12 text-center section-heading svg-sm-2 colored">
                     <img src="/website/images/flaticon/svg/002-wedding-couple.svg" class="svg" alt="">
                     <h2>Bruid &amp; Bruidegom</h2>
-                    <p>Ons komplimenteer mekaar, J&#243;van is 'n regte 'jack-in-the-box' veldmuis en Suzaan die huismuis. Saam deel ons introvertiese en ekstrovertiese eienskappe. Ons geniet gesellige tye saam met ons vriende, of dit nou buite is om die braaivuur of binne rondom die koffie tafel.</p>
+                    <p>Ons komplimenteer mekaar, J&#243;van is 'n regte 'jack-in-the-box' veldmuis en Suzaan die huismuis. Saam deel ons introvertiese en ekstrovertiese eienskappe. Ons geniet gesellige tye saam met ons vriende, of dit nou buite is om die braaivuur of binne rondom die koffietafel.</p>
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
                     <img src="/website/images/suzaan.jpg" class="img-responsive" alt="">
                     <div class="desc">
                         <h2>Suzaan van Zyl</h2>
-                        <p>Suzanabanana is 'n onderwyseres en sy is die beter helfte van J&#243;van. Sy wil so veel as moontlik by die huis wees saam haar familie met 'n beker koffie (Villamar) en 'n goeie fliekreeks. Sy is die beplanner, die uitvoerder en die stresbolletjie, maar terseldertyd die liefdevolste mens.</p>
+                        <p>Suzaan is 'n onderwyseres en sy is die beter helfte van J&#243;van. Sy wil so veel as moontlik by die huis wees saam haar familie met 'n beker koffie (Villamar) en 'n goeie fliekreeks. Sy is die beplanner, die uitvoerder en die stresbolletjie, maar terseldertyd die liefdevolste mens.</p>
                     </div>
                 </div>
             </div>

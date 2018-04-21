@@ -38,7 +38,7 @@
                     <div class="col-md-8 col-md-offset-2 text-center slider-text">
                         <div class="slider-text-inner">
                             <h1 class="holder"><span>Ons is so</span></h1>
-                            <h1>Geseend om mekaar te kon vind.</h1>
+                            <h1>Gese&#235;nd om mekaar te kon vind.</h1>
                             <h2>Kenmerke van ons verhouding is liefde, lojaliteit, respek, vergifnis, vertroue en om gefokus te bly op ons Hemelse Vader.</h2>
                             <p class="date"><span>15.12.2018</span></p>
                         </div>

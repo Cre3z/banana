@@ -46,7 +46,7 @@
                                 <span class="date">22 Julie, 2013</span>
                             </div>
                             <div class="timeline-body">
-                                <p>Dit was 'n deurmekaar spul want Suzaan het die eertse uitvraag gemis. Op 22 Julie het sy dit gevang en 'ja' gese tot niemand se verbasing.</p>
+                                <p>Dit was 'n deurmekaar spul want Suzaan het die eertse uitvraag gemis. Op 22 Julie het sy dit gevang en 'ja' ges&#234; tot niemand se verbasing.</p>
                             </div>
                         </div>
                     </li>
@@ -59,7 +59,7 @@
                                 <span class="date">22 Julie, 2017</span>
                             </div>
                             <div class="timeline-body">
-                                <p>Vier jaar later...het Suzaan dit steeds nie die eerste keer gevang nie, haar woorde was, 'Is jy ernstig?' terwyl J&#243;van op sy een knie staan met 'n ring in sy hand. Sy het weer 'ja' gese.</p>
+                                <p>Vier jaar later...het Suzaan dit steeds nie die eerste keer gevang nie, haar woorde was, 'Is jy ernstig?' terwyl J&#243;van op sy een knie staan met 'n ring in sy hand. Sy het weer 'ja' ges&#234;.</p>
                             </div>
                         </div>
                     </li>

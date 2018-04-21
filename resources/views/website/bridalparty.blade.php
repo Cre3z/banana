@@ -59,7 +59,7 @@
             <div class="col-md-4 text-center animate-box">
                 <div class="groom-men">
                     <img src="/website/images/sane.jpg" class="img-responsive" alt="">
-                    <h3>Sane van der Merwe</h3>
+                    <h3>San&#233; van der Merwe</h3>
                 </div>
             </div>
         </div>
