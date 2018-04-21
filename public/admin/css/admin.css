@@ -18,6 +18,10 @@ body {
     margin-top: 70px;
 }
 
+.mt-140 {
+    margin-top: 140px;
+}
+
 .mt-5 {
   margin-top: 5%;
 }
@@ -62,4 +66,12 @@ body {
 
 table tr:hover {
     cursor: pointer;
+}
+
+.countdown {
+    font-size: 20px;
+    padding: 15px;
+    background-color: #3333338a;
+    color: #fff;
+    border-radius: 6px;
 }

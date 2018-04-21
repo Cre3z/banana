@@ -3,6 +3,16 @@
 @section('content')
 <nav class="navbar navbar-transparent navbar-absolute">
     <div class="container-fluid">
+        <div class="row animate-box">
+            <div class="col-md-4 col-md-offset-8 text-center" data-background-color="red">
+                <p class="countdown">
+                    <span id="days"></span>
+                    <span id="hours"></span>
+                    <span id="minutes"></span>
+                    <span id="seconds"></span>
+                </p>
+            </div>
+        </div>
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse">
                 <span class="sr-only">Toggle navigation</span>
@@ -10,12 +20,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"> Welcome! </a>
+            <a class="navbar-brand" href="#"> Welkom! </a>
         </div>
     </div>
 </nav>
 
-<div class="content mt-70">
+<div class="content mt-140">
     <div class="container-fluid">
         <div class="row">
 
