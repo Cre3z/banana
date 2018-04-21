@@ -3,6 +3,15 @@
 @section('content')
 <nav class="navbar navbar-transparent navbar-absolute">
     <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+<!--            <a class="navbar-brand" href="#"> Welkom! </a>-->
+        </div>
         <div class="row animate-box">
             <div class="col-md-4 col-md-offset-8 text-center" data-background-color="red">
                 <p class="countdown">
@@ -13,19 +22,10 @@
                 </p>
             </div>
         </div>
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"> Welkom! </a>
-        </div>
     </div>
 </nav>
 
-<div class="content mt-140">
+<div class="content mt-70">
     <div class="container-fluid">
         <div class="row">
 
@@ -101,7 +101,7 @@
         </div>
         <div class="row">
           @if($todo)
-          <div class="col-lg-4 col-md-12">
+          <div class="col-lg-6 col-md-12">
               <a href="#">
                   <div class="card card-nav-tabs">
                       <div class="card-header" data-background-color="blue">

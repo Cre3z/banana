@@ -18,8 +18,10 @@ body {
     margin-top: 70px;
 }
 
-.mt-140 {
-    margin-top: 140px;
+@media only screen and (max-width: 991px) {
+    .mt-70 {
+        margin-top: 140px;
+    }
 }
 
 .mt-5 {
