@@ -9,11 +9,11 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" data-nav-section="groom-bride"><span>Groom &amp; Bride</span></a></li>
-            <li><a href="#" data-nav-section="story"><span>Love Story</span></a></li>
-            <li><a href="#" data-nav-section="people"><span>People</span></a></li>
-            <li><a href="#" data-nav-section="when-where"><span>When &amp; Where</span></a></li>
-            <li><a href="#" data-nav-section="rsvp"><span>Contact</span></a></li>
+            <li><a href="#" data-nav-section="groom-bride"><span>Bruid &amp; Bruidegom</span></a></li>
+            <li><a href="#" data-nav-section="story"><span>Ons Liefdesverhaal</span></a></li>
+            <li><a href="#" data-nav-section="people"><span>Die Squad</span></a></li>
+            <li><a href="#" data-nav-section="when-where"><span>Waar &amp; Wanneer</span></a></li>
+            <li><a href="#" data-nav-section="rsvp"><span>Kontak Ons</span></a></li>
           </ul>
         </div>
         </nav>

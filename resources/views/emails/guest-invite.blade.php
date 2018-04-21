@@ -40,7 +40,7 @@
       <tr>
         <th class="tg-yw4l hero">
             <div class="overlay-text">
-                <h1 class="holder"><span>Die Huweliksbesvestiging van</span> Suzaan &amp; Jovan</h1>
+                <h1 class="holder"><span>Die Huweliksbesvestiging van</span> Suzaan &amp; J&#243;van</h1>
             </div>
         </th>
       </tr>
