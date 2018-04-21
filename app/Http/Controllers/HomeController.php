@@ -17,7 +17,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('guest');
     }
 
     /**
@@ -64,7 +64,7 @@ class HomeController extends Controller
         if($guests && count($guests > 1)){
             $guest_couple = Guest::where('token', $request->token)->get();
             foreach($guest_couple as $key=>$couple){
-                if($couple->plus_one == "couple")
+                if($couple->plus_one == "couple"){
                     $couple->name = $request->get('name')[$key];
                     $couple->surname = $request->get('surname');
                     $couple->email = $request->get('email');
