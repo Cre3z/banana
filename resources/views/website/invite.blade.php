@@ -37,6 +37,10 @@
                     <div class="col-md-2 col-sm-12">
                         <button type="submit" class="btn btn-grey btn-block"><span class="glyphicon glyphicon-remove"></span></button>
                     </div>
+                    <div class="col-sm-12 text-center subtext cursive">
+                        <h3 class="text-white"><strong>Jammer,  geen  kinders. </strong>
+                        <br><strong>Geskenk  idee: </strong>ʼn  Geldjie  vir  ons  neseiertjie  sal  al  te  fraai  wees. </h3>
+                    </div>
                 </form>
                 @else
                 <form class="form-inline" method="post" action="/guests_rsvp/{{ $token }}">
@@ -80,9 +84,9 @@
                     <div class="col-md-2 col-sm-12">
                         <button type="submit" class="btn btn-grey btn-block"><span class="glyphicon glyphicon-remove"></span></button>
                     </div>
-                    <div class="col-sm-12">
-                        <p><strong>Jammer,  geen  kinders. </strong></p>
-                        <p><strong>Geskenk  idee: </strong>ʼn  Geldjie  vir  ons  neseiertjie  sal  al  te  fraai  wees. </p>
+                    <div class="col-sm-12 text-center subtext cursive">
+                        <h3 class="text-white"><strong>Jammer,  geen  kinders. </strong>
+                        <br><strong>Geskenk  idee: </strong>ʼn  Geldjie  vir  ons  neseiertjie  sal  al  te  fraai  wees. </h3>
                     </div>
                 </form>
                 @endif

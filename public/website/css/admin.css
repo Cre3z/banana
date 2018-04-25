@@ -78,3 +78,10 @@
 .control-checkbox input:disabled ~ .control_indicator:after {
     border-color: #7b7b7b;
 }
+
+.text-white {
+color: white !important;}
+
+.cursive {
+    font-family: "Clicker Script", cursive;
+}
