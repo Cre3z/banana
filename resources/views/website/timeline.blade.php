@@ -20,7 +20,7 @@
                                 <span class="date">Oktober, 2012</span>
                             </div>
                             <div class="timeline-body">
-                                <p>Dit het als begin met 'n wit gesig, 'n vuil kyk en 'n skewe grappie. Ons het ontmoet by Aurora se Henne en Hane dinee. Die herontmoeting in Januarie 2013 was vrolik, vriendlik en kompeterend.</p>
+                                <p>Dit het als begin met 'n wit gesig, 'n vuil kyk en 'n skewe grappie. Ons het ontmoet by Aurora se Henne en Hane dinee. Die herontmoeting in Januarie 2013 was vrolik, vriendelik en kompeterend.</p>
                             </div>
                         </div>
                     </li>
@@ -29,7 +29,7 @@
                         <div class="timeline-panel">
                             <div class="overlay overlay-2"></div>
                             <div class="timeline-heading">
-                                <h3 class="timeline-title">Eerste 'Date'</h3>
+                                <h3 class="timeline-title">Eerste 'date'</h3>
                                 <span class="date">Junie, 2013</span>
                             </div>
                             <div class="timeline-body">

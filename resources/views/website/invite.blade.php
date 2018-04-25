@@ -9,7 +9,7 @@
                     <h2>Jy is genooi!</h2>
                     <div class="row">
                     <div class="col-md-10 col-md-offset-1 subtext">
-                        <h3>RSVP: 15 Augustus 2018</h3>
+                        <h3>Kontroleer  en  bevestig  asseblief  jou  besonderhede  hier  onder.  Aanvaar  of  wys  die  uitnodiging  van  die  hand  voor  15  Augustus  2018.  Indien  jy  enige  probleme  met  die  uitnodiging  ervaar,  kontak  asseblief  vir  Suzaan.   </h3>
                     </div>
                 </div>
                 </div>
@@ -32,7 +32,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-12">
-                        <button type="submit" class="btn btn-default btn-block">Ja, ek is op pad.</button>
+                        <button type="submit" class="btn btn-default btn-block">Ek  woon  by!</button>
                     </div>
                     <div class="col-md-2 col-sm-12">
                         <button type="submit" class="btn btn-grey btn-block"><span class="glyphicon glyphicon-remove"></span></button>
@@ -75,10 +75,14 @@
                     </div>
                     <div class="clearfix"></div><br>
                     <div class="col-md-4 col-md-offset-6 col-sm-12">
-                        <button type="submit" class="btn btn-default btn-block">Ja, ek is op pad.</button>
+                        <button type="submit" class="btn btn-default btn-block">Ek  woon  by!</button>
                     </div>
                     <div class="col-md-2 col-sm-12">
                         <button type="submit" class="btn btn-grey btn-block"><span class="glyphicon glyphicon-remove"></span></button>
+                    </div>
+                    <div class="col-sm-12">
+                        <p><strong>Jammer,  geen  kinders. </strong></p>
+                        <p><strong>Geskenk  idee: </strong>ʼn  Geldjie  vir  ons  neseiertjie  sal  al  te  fraai  wees. </p>
                     </div>
                 </form>
                 @endif
@@ -97,7 +101,7 @@
                     <h2>Kontak Ons</h2>
                     <div class="row">
                     <div class="col-md-10 col-md-offset-1 subtext">
-<!--                        <h3>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</h3>-->
+                        <h3>Indien  jy  enige  navrae  of  onsekerhede  het,  moet  nie  huiwer  om  ons  te  kontak  nie.    </h3>
                     </div>
                 </div>
                 </div>

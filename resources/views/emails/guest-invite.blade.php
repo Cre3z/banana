@@ -55,9 +55,10 @@
             <p>Jy/Julle  word  hartlik  uitgenooi  na  ons  huweliksbevestiging!  Dit  sal  vir  ons  ‘n  eer  en  ‘n  voorreg  wees  as  jy  dit  saam  met  ons  kan  deel.  ‘n  Groot  dag  kan  net  meer  spesiaal  wees  met  jou  daar.  </p>
             <p><strong>Datum: </strong> 15 Desember 2018</p>
             <p><strong>Tyd: </strong> 16:00 vir 16:30</p>
-            <p><strong>Waar: </strong> Gardens Collective/Kerkstraat Park, Tulbagh, oorkant 29.</p>
+            <p><strong>Waar: </strong> 30  Kerkstraat,  Tulbagh,  oorkant  29  Restuarant </p>
             <p><strong>RSVP: </strong> 15 Augustus 2018</p>
             <p><strong>Kleredrag: </strong> Semi-formeel  (geen  jeans).  Tulbagh  is  lekker  warm  in  Desember,  so  trek  maar  koel  aan.  Dames,  ongelukkig  geen  hakskoene  nie,  dit  gaan  die  groengrasveld  van  die  laan  beskadig.   </p>
+            <p><strong>Geskenk  idee: </strong>ʼn  Geldjie  vir  ons  neseiertjie  sal  al  te  fraai  wees. </p>
             <p><strong>Nota: </strong> Jammer, geen kinders.</p>
             <p>Aangesien daar waterbeperkings is en ons dus nie meer ons bome kan water gee nie, is daar minder bome beskikbaar vir papier uitnodigings. So, in ons strewe om die natuur te help beskerm het ons besluit om ons uitnodigings digitaal te maak. Volg die onderstaande skakel wat na ons trou webblad gaan, jou uitnodiging kan aan die heel onderkant gevind word. Ons het dit vir jou maklik gemaak en reeds al jou besondehede ingevul, so al wat jy moet doen is die inligiting bevestig en die uitnodiging aanvaar. </p>
             <p>Jou uitnodiging sluit 'n metgesel in. Ons vra dat jy jou metgesel se naam en van verskaf indien jy die uitnodiging so aanvaar. In die geval dat jy onseker is wie jou metgesel gaan wees, los asseblief die verskafte bewoording in die spasie en bevestig met Suzaan teen 1 November 2018 wie jou metgesel gaan wees. Indien jy nie 'n metgesel gaan bring nie, kies asseblief die "geen metgesel" opsie op die uitnodiging.</p>
