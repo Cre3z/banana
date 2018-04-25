@@ -170,5 +170,22 @@ $(document).ready(function(){
      document.getElementById("countdown").style.display = "none";
     }
     }, 1000);
+    
+    
+    Superhero = function(data) {
+        this.name = data.name;
+        this.age = data.age;
+    }
+    
+    let batman = new Superhero();
+    
+    this.attack = function(){};
+    
+    Superhero.prototype.attack = function() {
+        return this.firstName + " " + this.lastName;
+    };
+    
+    batman.attack(batman);
+    
 
 });

@@ -21,7 +21,7 @@
             </div>
             <div class="col-md-6">
                 <div class="couple groom text-center animate-box">
-                    <img src="/website/images/groom.jpg" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
+                    <img src="/website/images/jovan.JPG" class="img-responsive" alt="Free HTML5 Bootstrap Template by QBootstrap.com">
                     <div class="desc">
                         <h2>J&#243;van Jordaan</h2>
                         <p>Die man is kort, die man is rats, die man is vinnig. J&#243;van is besig met sy leerling rekenmeester klerkskap en is tans in sy finale jaar. J&#243;van is onder andere ook 'n gekwalifisserde krieket afrigter en die grootste sport entoesias wat bestaan. Hy bly fiks, gemotiveerd en is altyd positief met 'n grappie of tien in die mou.</p>
