@@ -57,27 +57,43 @@ class HomeController extends Controller
     
     public function guestRSVP(Request $request)
     {
-        $token = $request->token;
         $guests = Guest::where('token', $request->token)->count();
-
-        // var_dump($guests);exit;
         
         //couple or guest + plus one
         if($guests > 1){
-            var_dump($guests);exit;
-            $guest_couple = Guest::where('token', $request->token)->get();
-            foreach($guest_couple as $key=>$couple){
-                if($couple->plus_one == "couple"){
-                    $couple->name = $request->get('name')[$key];
-                    $couple->surname = $request->get('surname');
-                    $couple->email = $request->get('email');
-                    $couple->invited = true;
-                    $couple->rsvp = "yes";
-                    $couple->save();
-                } else {
-                    
+            // var_dump($guests);exit;
+            if($request->no_partner == 'on'){ 
+                $guest_partner = Guest::where('token', $request->token)->whereNull('plus_one_id')->first();
+                $guest_partner->rsvp = "declined";
+                $guest_partner->save();
+
+                $guest = Guest::where('token', $request->token)->whereNotNull('plus_one_id')->first();
+                $guest->rsvp = "yes";
+                $guest->save();
+
+            } else {
+                $guest_couple = Guest::where('token', $request->token)->get();
+                foreach($guest_couple as $key=>$couple){
+                    if($couple->plus_one == "couple"){
+                        $couple->name = $request->get('name')[$key];
+                        $couple->surname = $request->get('surname');
+                        $couple->email = $request->get('email');
+                        $couple->invited = true;
+                        $couple->rsvp = "yes";
+                        $couple->save();
+                    } else {
+                        if($key == 0){
+                            $couple->name = $request->get('name')[1] . " (". $request->get('name')[0] . "'s Plus One)";
+                            $couple->surname = $request->get('surname');
+                        }
+                        $couple->email = $request->get('email');
+                        $couple->invited = true;
+                        $couple->rsvp = "yes";
+                        $couple->save();
+                    }
                 }
             }
+            
         } 
         //single guest
         else {
@@ -94,36 +110,11 @@ class HomeController extends Controller
 
     public function guestRSVPdecline(Request $request)
     {
-        $token = $request->token;
-        $guests = Guest::where('token', $request->token)->count();
-
-        // var_dump($guests);exit;
-        
-        //couple or guest + plus one
-        if($guests > 1){
-            var_dump($guests);exit;
-            $guest_couple = Guest::where('token', $request->token)->get();
-            foreach($guest_couple as $key=>$couple){
-                if($couple->plus_one == "couple"){
-                    $couple->name = $request->get('name')[$key];
-                    $couple->surname = $request->get('surname');
-                    $couple->email = $request->get('email');
-                    $couple->invited = true;
-                    $couple->rsvp = "yes";
-                    $couple->save();
-                } else {
-                    
-                }
-            }
-        } 
-        //single guest
-        else {
-            $guest = Guest::where('token', $request->token)->first();
-            $guest->name = $request->get('name');
-            $guest->email = $request->get('email');
-            $guest->invited = true;
-            $guest->rsvp = "declined";
-            $guest->save();
+        $guest = Guest::where('token', $request->token)->get();
+        foreach($guest as $key=>$couple){
+            $couple->invited = true;
+            $couple->rsvp = "declined";
+            $couple->save();
         }
 
         return redirect('/');

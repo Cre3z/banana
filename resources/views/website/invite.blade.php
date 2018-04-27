@@ -48,6 +48,7 @@
                 </form>
                 @else
                 <form class="form-inline" method="post" action="/guests_rsvp/{{ $token }}">
+                    {{ csrf_field() }}
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="name" class="sr-only">Name</label>
@@ -85,6 +86,9 @@
                     <div class="col-md-4 col-md-offset-6 col-sm-12">
                         <button type="submit" class="btn btn-default btn-block">Ek  woon  by!</button>
                     </div>
+                </form>
+                <form class="form-inline" method="post" action="/guests_rsvp/decline/{{ $token }}">
+                    {{ csrf_field() }}
                     <div class="col-md-2 col-sm-12">
                         <button type="submit" class="btn btn-grey btn-block"><span class="glyphicon glyphicon-remove"></span></button>
                     </div>
