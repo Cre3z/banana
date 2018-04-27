@@ -59,9 +59,12 @@ class HomeController extends Controller
     {
         $token = $request->token;
         $guests = Guest::where('token', $request->token)->count();
+
+        // var_dump($guests);exit;
         
         //couple or guest + plus one
-        if($guests && count($guests > 1)){
+        if($guests > 1){
+            var_dump($guests);exit;
             $guest_couple = Guest::where('token', $request->token)->get();
             foreach($guest_couple as $key=>$couple){
                 if($couple->plus_one == "couple"){
@@ -77,7 +80,7 @@ class HomeController extends Controller
             }
         } 
         //single guest
-        else if($guests && count($guests <= 1)){
+        else {
             $guest = Guest::where('token', $request->token)->first();
             $guest->name = $request->get('name');
             $guest->email = $request->get('email');
@@ -85,5 +88,44 @@ class HomeController extends Controller
             $guest->rsvp = "yes";
             $guest->save();
         }
+
+        return redirect('/');
+    }
+
+    public function guestRSVPdecline(Request $request)
+    {
+        $token = $request->token;
+        $guests = Guest::where('token', $request->token)->count();
+
+        // var_dump($guests);exit;
+        
+        //couple or guest + plus one
+        if($guests > 1){
+            var_dump($guests);exit;
+            $guest_couple = Guest::where('token', $request->token)->get();
+            foreach($guest_couple as $key=>$couple){
+                if($couple->plus_one == "couple"){
+                    $couple->name = $request->get('name')[$key];
+                    $couple->surname = $request->get('surname');
+                    $couple->email = $request->get('email');
+                    $couple->invited = true;
+                    $couple->rsvp = "yes";
+                    $couple->save();
+                } else {
+                    
+                }
+            }
+        } 
+        //single guest
+        else {
+            $guest = Guest::where('token', $request->token)->first();
+            $guest->name = $request->get('name');
+            $guest->email = $request->get('email');
+            $guest->invited = true;
+            $guest->rsvp = "declined";
+            $guest->save();
+        }
+
+        return redirect('/');
     }
 }

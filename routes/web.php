@@ -83,7 +83,8 @@ Route::group(['middleware' => 'admin'], function() {
 
 Route::group(['middleware' => 'guest'], function() {
     Route::get('/{token}', 'HomeController@getGuest')->name('guests_invite_token');
+    Route::post('/guests_rsvp/{token}', 'HomeController@guestRSVP')->name('guests_rsvp');
     Route::get('/{event_id}/{token}', 'HomeController@getEvent')->name('guests_events');
-    Route::get('/guests_rsvp/{token}', 'HomeController@guestRSVP')->name('guests_rsvp');
+    Route::post('/guests_rsvp/decline/{token}', 'HomeController@guestRSVPdecline')->name('decline');
     Route::post('/contact', 'HomeController@contactUs')->name('contact_us');
 });

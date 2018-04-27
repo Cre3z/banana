@@ -19,6 +19,7 @@
             <div class="col-md-10 col-md-offset-1">
                 @if(!(count($guests_invite) > 1))
                 <form class="form-inline" method="post" action="/guests_rsvp/{{ $token }}">
+                    {{ csrf_field() }}
                     <div class="col-md-3 col-sm-12">
                         <div class="form-group">
                             <label for="name" class="sr-only">Name</label>
@@ -34,6 +35,9 @@
                     <div class="col-md-4 col-sm-12">
                         <button type="submit" class="btn btn-default btn-block">Ek  woon  by!</button>
                     </div>
+                </form>
+                <form class="form-inline" method="post" action="/guests_rsvp/decline/{{ $token }}">
+                    {{ csrf_field() }}
                     <div class="col-md-2 col-sm-12">
                         <button type="submit" class="btn btn-grey btn-block"><span class="glyphicon glyphicon-remove"></span></button>
                     </div>
