@@ -29,6 +29,6 @@ class GuestInvite extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.guest-invite')->subject('Yay');
+        return $this->view('emails.guest-invite')->subject('Suzaan & Jovan | Troue Uitnodiging');
     }
 }
