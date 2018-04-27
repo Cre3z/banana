@@ -38,7 +38,8 @@ class HomeController extends Controller
     public function getGuest(Request $request)
     {
         $guests = Guest::where('token', $request->token)->get();
-        return view('welcome', ['guests_invite' => $guests, 'token'=>$request->token]);
+        if($guests){return view('welcome', ['guests_invite' => $guests, 'token'=>$request->token]);}
+        else {var_dump('test');exit;return redirect('/');}
     }
     
     public function getEvent(Request $request)
