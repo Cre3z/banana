@@ -62,6 +62,7 @@
                             <thead class="text-primary">
                                 <tr>
                                     <th data-sortable="true" data-field="name">Name</th>
+                                    <th data-sortable="true" data-field="surname">Surname</th>
                                     <th data-field="cell">Cell</th>
                                     <th data-sortable="true" data-field="email">Email</th>
                                     <th data-sortable="true" data-field="plus_one">Plus One</th>

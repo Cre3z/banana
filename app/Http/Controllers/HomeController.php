@@ -61,7 +61,7 @@ class HomeController extends Controller
         
         //couple or guest + plus one
         if($guests > 1){
-            // var_dump($guests);exit;
+
             if($request->no_partner == 'on'){ 
                 $guest_partner = Guest::where('token', $request->token)->whereNull('plus_one_id')->first();
                 $guest_partner->rsvp = "declined";

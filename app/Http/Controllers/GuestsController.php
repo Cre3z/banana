@@ -155,7 +155,7 @@ class GuestsController extends Controller
         }
         $guest->save();
         
-        return redirect('/guests_rsvp');
+        return back();
     }
     
     public function updateCouple($id, Request $request){
@@ -181,7 +181,7 @@ class GuestsController extends Controller
         }
         $guest->save();
         
-        return redirect('/guests_all');
+        return back();
     }
     
     public function all()
