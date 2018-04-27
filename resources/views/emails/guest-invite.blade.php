@@ -12,7 +12,7 @@
     .tg  {border-collapse:collapse;border-spacing:0;}
     .tg td{font-family:Arial, sans-serif;font-size:14px;overflow:hidden;word-break:normal;}
     .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;overflow:hidden;word-break:normal;}
-    .hero { background-image: url(website/images/cover_bg_3.jpg);background-position: center; height: 350px; color: #fff; position: relative;}
+    .hero { background-image: url(http://www.suzaanjovan.co.za/website/images/cover_bg_3.jpg);background-position: center; height: 350px; color: #fff; position: relative;}
     .footer {background-position: top; height: 100px; position: relative;background-color: #001f54;}
     h1 { color: #fff;font-family: "Clicker Script", cursive; font-size: 3em;}
     .overlay-text {position: absolute;
