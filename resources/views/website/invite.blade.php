@@ -122,25 +122,25 @@
         <div class="row animate-box">
             <div class="col-md-10 col-md-offset-1">
                 <form class="form-inline" action="/contact" method="post">
-                    
+                {{ csrf_field() }}
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="name" class="sr-only">Naam</label>
-                            <input type="name" class="form-control" id="name" placeholder="Naam" name="name">
+                            <input type="name" class="form-control" id="name" placeholder="Naam" name="name" required>
                         </div>
                     </div>
                     
                     <div class="col-md-6 col-sm-12">
                         <div class="form-group">
                             <label for="email" class="sr-only">E-pos</label>
-                            <input type="email" class="form-control" id="email" placeholder="E-pos" name="email">
+                            <input type="email" class="form-control" id="email" placeholder="E-pos" name="email" required>
                         </div>
                     </div>
                     
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label for="email" class="sr-only">Boodskap</label>
-                            <textarea class="form-control" placeholder="Boodskap" name="message" rows="6"></textarea>
+                            <textarea class="form-control" placeholder="Boodskap" name="message" rows="6" required></textarea>
                         </div>
                     </div>
                     

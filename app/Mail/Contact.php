@@ -34,6 +34,6 @@ class Contact extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.contact')->subject("Contact Request: Website");
+        return $this->view('emails.contact')->subject("Contact Request: Wedding Website");
     }
 }

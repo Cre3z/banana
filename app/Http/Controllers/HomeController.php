@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\Guest;
 use App\Todo;
 use App\Mail\Contact;
@@ -39,7 +40,7 @@ class HomeController extends Controller
     {
         $guests = Guest::where('token', $request->token)->get();
         if($guests){return view('welcome', ['guests_invite' => $guests, 'token'=>$request->token]);}
-        else {var_dump('test');exit;return redirect('/');}
+        else {return redirect('/');}
     }
     
     public function getEvent(Request $request)
