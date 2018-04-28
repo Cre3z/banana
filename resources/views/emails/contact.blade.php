@@ -30,9 +30,9 @@
       </tr>
       <tr>
         <td class="tg-yw4l info" style="padding: 20px 10px;">
-            <p><strong>Name: </strong> {{ $name }}</p>
-            <p><strong>Email: </strong> {{ $email }}</p>
-            <p><strong>Message: </strong> {{ $message }}</p>
+            <p><strong>Name: </strong> {{ $data['name'] }}</p>
+            <p><strong>Email: </strong> {{ $data['email'] }}</p>
+            <p><strong>Message: </strong> {{ $data['message'] }}</p>
             
         </td>
       </tr>

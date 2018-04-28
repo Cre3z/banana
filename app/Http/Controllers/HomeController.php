@@ -51,10 +51,13 @@ class HomeController extends Controller
     
     public function contactUs(Request $request)
     {
-        $gEmail     = $request->get('email');
-        $gName      = $request->get('name');
-        $gMessage   = $request->get('message');
-        $send = Mail::to('cnortje@hotmail.com')->send(new Contact($gName, $gEmail, $gMessage))->from('noreply@suzaanjovan.co.za');
+        $data = [
+            'email' => $request->get('email'),
+            'name' => $request->get('name'),
+            'message' => $request->get('message'),
+        ];
+        $send = Mail::to('cnortje@hotmail.com')->send(new Contact($data));
+        return redirect('/');
     }
     
     public function guestRSVP(Request $request)
