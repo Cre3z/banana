@@ -40,19 +40,19 @@
                         </a>
                     </li>
 
-                    <li id="email-scheduler">
+                    <!-- <li id="email-scheduler">
                         <a href="/email-scheduler">
                             <i class="material-icons">email</i>
                             <p>Schedule Emails</p>
                         </a>
-                    </li>
+                    </li> -->
 
-                    <li id="events">
+                    <!-- <li id="events">
                         <a href="/events">
                             <i class="material-icons">today</i>
                             <p>Events</p>
                         </a>
-                    </li>
+                    </li> -->
 
                     <li id="users">
                         <a href="/users">
