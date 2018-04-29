@@ -57,7 +57,7 @@
                                                 </label>
                                             </div>
                                         </td>
-                                        <td class="input_hidden hidden" id="input_{{ $key }}"><input name="new" class="edit_entry_input form-control" value="{{ $entry['body']}}" type="text" id="input_value_{{ $key }}"></td>
+                                        <td class="input_hidden hidden" id="input_{{ $key }}"><input name="new" class="edit_entry_input form-control" value="{{ $entry['body']}}" type="text" id="input_value_{{ $key }}" required></td>
                                         <td class="input_hidden edit_entry_input_value" id="value_{{ $key }}">{{ $entry['body']}}</td>
                                         <td class="td-actions text-right">
                                             <button type="button" rel="tooltip" title="" class="btn btn-primary btn-simple btn-xs edit_entry" data-original-title="Edit Task" data-index="{{ $key }}" data-id="{{ $one->id }}" id="btn_edit_{{ $key }}">
@@ -84,7 +84,7 @@
                                 <div class="col-xs-12">
                                     <div class="form-group label-floating is-empty">
                                         <label class="control-label">Please remember...</label>
-                                        <input type="text" class="form-control" name="new">
+                                        <input type="text" class="form-control" name="new" required>
                                     <span class="material-input"></span></div>
                                 </div>
 
