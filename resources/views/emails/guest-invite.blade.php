@@ -62,7 +62,7 @@
       </tr>
       <tr>
         <td class="tg-yw4l link" style="text-align: center; height: 100px;">
-            <a class="btn btn-default" style="height: 54px;border: none !important;background: #001f54;color: #fff;font-size: 16px;text-transform: uppercase;font-weight: 400; padding: 20px 40px; border-radius: 6px; text-decoration: none;" href="http://www.suzaanjovan.co.za/{{ $guests[1]->token }}">Besigtig uitnodiging</a>
+            <a class="btn btn-default" style="height: 54px;border: none !important;background: #001f54;color: #fff;font-size: 16px;text-transform: uppercase;font-weight: 400; padding: 20px 40px; border-radius: 6px; text-decoration: none;" href="http://www.suzaanjovan.co.za/{{ $guests[1]->token }}#qbootstrap-started">Besigtig uitnodiging</a>
             <br>
         </td>
       </tr>
