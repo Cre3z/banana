@@ -56,7 +56,7 @@
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">Cell Number</label>
-                            <input type="number" class="form-control" name="cell" required>
+                            <input type="number" class="form-control" name="cell" required min="10">
                         <span class="material-input"></span></div>
                     </div>
                     <div class="col-md-6">
@@ -146,7 +146,7 @@
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">Cell Number</label>
-                            <input type="number" class="form-control" name="cell" required>
+                            <input type="number" class="form-control" name="cell" required min="10">
                         <span class="material-input"></span></div>
                     </div>
                     <div class="col-md-6">
