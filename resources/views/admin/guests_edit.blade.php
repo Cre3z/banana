@@ -42,6 +42,7 @@
                         <span class="material-input"></span></div>
                     </div>
                 </div>
+                @if($guest->plus_one != '')
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
@@ -56,7 +57,9 @@
                         <span class="material-input"></span></div>
                     </div>
                 </div>
+                @endif
                 <div class="row">
+                    @if($guest->plus_one != '')
                     <div class="col-md-6">
                         <div class="checkbox">
                             <label>
@@ -66,6 +69,7 @@
                         </div>
                         <p>This guest has already received/accepted your invitation, you are unable to deselect this feature.</p>
                     </div>
+                    @endif
                     @if($guest->rsvp == 'no')
                     <div class="col-md-6">
                         <div class="checkbox">

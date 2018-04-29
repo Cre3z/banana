@@ -122,40 +122,46 @@ class GuestsController extends Controller
     public function update($id, Request $request){
         $guest = Guest::find($id);
             
-        //ADD PLUS ONE FIRST 
-        if($request->get("plus_one") == "on"){
-            $plus_one = new Guest();
-            $plus_one->name = $request->get("name") . "'s Plus One";
-            $plus_one->email = $request->get("email");
-            $plus_one->cell = $request->get("cell");
-            if($request->get("rsvp") == "on"){
-                $plus_one->invited = true;$plus_one->rsvp = "yes";
+        if($guest->plus_one == ''){
+            $guest->name = $request->get("name") . "'s Plus One";
+            $guest->surname = $request->get("surname");
+            $guest->save();
+        } else {
+            //ADD PLUS ONE FIRST 
+            if($request->get("plus_one") == "on"){
+                $plus_one = new Guest();
+                $plus_one->name = $request->get("name") . "'s Plus One";
+                $plus_one->email = $request->get("email");
+                $plus_one->cell = $request->get("cell");
+                if($request->get("rsvp") == "on"){
+                    $plus_one->invited = true;$plus_one->rsvp = "yes";
+                } else {
+                    $plus_one->invited = false;$plus_one->rsvp = "no";
+                }
+                $plus_one->save();
             } else {
-                $plus_one->invited = false;$plus_one->rsvp = "no";
+                if($guest->plus_one_id){
+                    $plus_one = Guest::find($guest->plus_one_id);
+                    $plus_one->delete();
+                }
             }
-            $plus_one->save();
-        } else {
-            if($guest->plus_one_id){
-                $plus_one = Guest::find($guest->plus_one_id);
-                $plus_one->delete();
-            }
-        }
 
-        $guest->name = $request->get("name");
-        $guest->surname = $request->get("surname");
-        $guest->cell = $request->get("cell");
-        $guest->email = $request->get("email");
-        if($request->get("plus_one") == "on"){
-            $guest->plus_one = "yes"; $guest->plus_one_id = $plus_one->id;
-        } else {
-            $guest->plus_one = "no"; $guest->plus_one_id = '';
+            $guest->name = $request->get("name");
+            $guest->surname = $request->get("surname");
+            $guest->cell = $request->get("cell");
+            $guest->email = $request->get("email");
+            if($request->get("plus_one") == "on"){
+                $guest->plus_one = "yes"; $guest->plus_one_id = $plus_one->id;
+            } else {
+                $guest->plus_one = "no"; $guest->plus_one_id = '';
+            }
+            if($request->get("rsvp") == "on"){
+                $guest->invited = true;$guest->rsvp = "yes";
+            }
+            $guest->save();
         }
-        if($request->get("rsvp") == "on"){
-            $guest->invited = true;$guest->rsvp = "yes";
-        }
-        $guest->save();
         
-        return back();
+        return redirect('/guests');
     }
     
     public function updateCouple($id, Request $request){
@@ -181,7 +187,7 @@ class GuestsController extends Controller
         }
         $guest->save();
         
-        return back();
+        return redirect('/guests');
     }
     
     public function all()
