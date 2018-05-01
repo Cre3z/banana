@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
 
         $admin = new User();
         $admin->name = "Suzaan";
-        $admin->type = "Bride";
+        $admin->type = "admin";
         $admin->role = "Bride";
         $admin->password = bcrypt("bride");
         $admin->email = "suzaanvzyl@gmail.com";
@@ -33,7 +33,7 @@ class UsersTableSeeder extends Seeder
 
         $admin = new User();
         $admin->name = "Jovan";
-        $admin->type = "Groom";
+        $admin->type = "admin";
         $admin->role = "Groom";
         $admin->password = bcrypt("groom");
         $admin->email = "suzaanvzyl@gmail.com";
