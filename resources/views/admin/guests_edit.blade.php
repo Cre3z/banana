@@ -114,7 +114,7 @@
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">Surname One (Optional)</label><br>
-                            <input type="text" class="form-control" name="surname[]" value="{{ $guest['couple']->name }}">
+                            <input type="text" class="form-control" name="surname[]" value="{{ $guest->surname }}">
                         <span class="material-input"></span></div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">Name Two</label><br>
-                            <input type="text" class="form-control" name="name[]" required value="{{ $guest->surname }}">
+                            <input type="text" class="form-control" name="name[]" required value="{{ $guest['couple']->name }}">
                         <span class="material-input"></span></div>
                     </div>
                     <div class="col-md-6">

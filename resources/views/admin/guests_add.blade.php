@@ -124,7 +124,7 @@
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">Surname One (Optional)</label>
-                            <input type="text" class="form-control" name="name[]">
+                            <input type="text" class="form-control" name="surname[]">
                         <span class="material-input"></span></div>
                     </div>
                 </div>
@@ -132,7 +132,7 @@
                     <div class="col-md-6">
                         <div class="form-group label-floating is-empty">
                             <label class="control-label">Name Two</label>
-                            <input type="text" class="form-control" name="surname[]" required>
+                            <input type="text" class="form-control" name="name[]" required>
                         <span class="material-input"></span></div>
                     </div>
                     <div class="col-md-6">
