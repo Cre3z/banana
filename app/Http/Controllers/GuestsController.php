@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\GuestInvite;
+use App\Mail\SingleGuestInvite;
 use App\Guest;
 
 class GuestsController extends Controller
@@ -251,6 +252,8 @@ class GuestsController extends Controller
                 $found->token = $token;
                 $found->save();
             }
+
+            $this->sendEmail($find->email, $guests);
         } 
         //guest plus one
         else if($find->plus_one_id && $find->plus_one == "yes"){
@@ -260,21 +263,30 @@ class GuestsController extends Controller
                 $found->token = $token;
                 $found->save();
             }
+
+            $this->sendEmail($find->email, $guests);
         } 
         //guest no plus one
         else if($find->plus_one == "no"){
             $find->invited = true; 
             $find->token = $this->generateRandomString();
             $find->save();
-        } else {
-            return;
+            
+            $send = Mail::to('cnortje@hotmail.com')->send(new SingleGuestInvite($find))->from('noreply@suzaanjovan.co.za');
+            if(!$send){
+                $find = Guest::find('email', $email)->get();
+                foreach($find as $found){
+                    $found->invited = false; $found->save();
+                }
+            }
         }
         
-        $this->sendEmail($find->email, $guests);
+        // $this->sendEmail($find->email, $guests);
 
     }
     
     function sendEmail($email, $guests) {
+        // var_dump($guests);exit;
         $send = Mail::to('cnortje@hotmail.com')->send(new GuestInvite($guests))->from('noreply@suzaanjovan.co.za');
         if(!$send){
             $find = Guest::find('email', $email)->get();

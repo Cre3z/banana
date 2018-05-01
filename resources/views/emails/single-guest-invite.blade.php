@@ -25,24 +25,12 @@
       </tr>
       <tr>
         <td class="tg-yw4l heading" style="padding: 20px 10px;">
-            @if(count($guests) == 2)
-            <h2 style="font-size: 2em; text-align: center;">Julle is uitgenooi!</h2>
-            @else
             <h2 style="font-size: 2em; text-align: center;">Jy is uitgenooi!</h2>
-            @endif
         </td>
       </tr>
       <tr>
         <td class="tg-yw4l info" style="padding: 20px 10px;">
-        @if(count($guests) == 2)
-            @if($guests[0]->plus_one == "couple")
-            <p>Beste {{$guests[0]->name}} & {{$guests[1]->name}}</p>
-            @else
-            <p>Beste {{$guests[1]->name}}</p>
-            @endif
-        @else
-            <p>Beste {{$guests[0]->name}}</p>
-        @endif
+            <p>Beste {{$guest->name}}</p>
             <p>Jy/Julle  word  hartlik  uitgenooi  na  ons  huweliksbevestiging!  Dit  sal  vir  ons  ‘n  eer  en  ‘n  voorreg  wees  as  jy  dit  saam  met  ons  kan  deel.  ‘n  Groot  dag  kan  net  meer  spesiaal  wees  met  jou  daar.  </p>
             <p><strong>Datum: </strong> 15 Desember 2018</p>
             <p><strong>Tyd: </strong> 16:00 vir 16:30</p>
@@ -52,7 +40,7 @@
             <p><strong>Geskenk  idee: </strong>ʼn  Geldjie  vir  ons  neseiertjie  sal  al  te  fraai  wees. </p>
             <p><strong>Nota: </strong> Jammer, geen kinders.</p>
             <p>Aangesien daar waterbeperkings is en ons dus nie meer ons bome kan water gee nie, is daar minder bome beskikbaar vir papier uitnodigings. So, in ons strewe om die natuur te help beskerm het ons besluit om ons uitnodigings digitaal te maak. Volg die onderstaande skakel wat na ons trou webblad gaan, jou uitnodiging kan aan die heel onderkant gevind word. Ons het dit vir jou maklik gemaak en reeds al jou besondehede ingevul, so al wat jy moet doen is die inligiting bevestig en die uitnodiging aanvaar. </p>
-            @if(count($guests) == 2 && $guests[1]->plus_one == "yes")
+            @if($guest->plus_one == "yes")
             <p>Jou uitnodiging sluit 'n metgesel in. Ons vra dat jy jou metgesel se naam en van verskaf indien jy die uitnodiging so aanvaar. In die geval dat jy onseker is wie jou metgesel gaan wees, los asseblief die verskafte bewoording in die spasie en bevestig met Suzaan teen 1 November 2018 wie jou metgesel gaan wees. Indien jy nie 'n metgesel gaan bring nie, kies asseblief die "geen metgesel" opsie op die uitnodiging.</p>
             @endif
             <p>Indien jy enige navrae het, kontak gerus vir Cecilia van Zyl <strong>081 390 6814</strong> of vir Suzaan van Zyl by <strong>072 434 3546</strong>. Jy kan ook met ons in kontak tree via die webwerf.</p>
@@ -62,7 +50,7 @@
       </tr>
       <tr>
         <td class="tg-yw4l link" style="text-align: center; height: 100px;">
-            <a class="btn btn-default" style="height: 54px;border: none !important;background: #001f54;color: #fff;font-size: 16px;text-transform: uppercase;font-weight: 400; padding: 20px 40px; border-radius: 6px; text-decoration: none;" href="http://www.suzaanjovan.co.za/{{ $guests[0]->token }}#qbootstrap-started">Besigtig uitnodiging</a>
+            <a class="btn btn-default" style="height: 54px;border: none !important;background: #001f54;color: #fff;font-size: 16px;text-transform: uppercase;font-weight: 400; padding: 20px 40px; border-radius: 6px; text-decoration: none;" href="http://www.suzaanjovan.co.za/{{ $guest->token }}#qbootstrap-started">Besigtig uitnodiging</a>
             <br>
         </td>
       </tr>

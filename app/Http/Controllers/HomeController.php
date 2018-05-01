@@ -74,6 +74,7 @@ class HomeController extends Controller
 
                 $guest = Guest::where('token', $request->token)->whereNotNull('plus_one_id')->first();
                 $guest->rsvp = "yes";
+                $guest->plus_one = "declined";
                 $guest->save();
 
             } else {
