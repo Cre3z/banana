@@ -274,7 +274,7 @@ class GuestsController extends Controller
             
             $send = Mail::to($find->email)->send(new SingleGuestInvite($find))->from('noreply@suzaanjovan.co.za');
             if(!$send){
-                $finder = Guest::find('email', $find->email)->get();
+                $finder = Guest::find('email', $find->email)->first();
                 $finder->invited = false; $finder->save();
             }
         }
