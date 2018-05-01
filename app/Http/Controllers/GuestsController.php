@@ -272,12 +272,10 @@ class GuestsController extends Controller
             $find->token = $this->generateRandomString();
             $find->save();
             
-            $send = Mail::to('cnortje@hotmail.com')->send(new SingleGuestInvite($find))->from('noreply@suzaanjovan.co.za');
+            $send = Mail::to($find->email)->send(new SingleGuestInvite($find))->from('noreply@suzaanjovan.co.za');
             if(!$send){
-                $find = Guest::find('email', $email)->get();
-                foreach($find as $found){
-                    $found->invited = false; $found->save();
-                }
+                $finder = Guest::find('email', $find->email)->get();
+                $finder->invited = false; $finder->save();
             }
         }
         
@@ -287,7 +285,7 @@ class GuestsController extends Controller
     
     function sendEmail($email, $guests) {
         // var_dump($guests);exit;
-        $send = Mail::to('cnortje@hotmail.com')->send(new GuestInvite($guests))->from('noreply@suzaanjovan.co.za');
+        $send = Mail::to($email)->send(new GuestInvite($guests))->from('noreply@suzaanjovan.co.za');
         if(!$send){
             $find = Guest::find('email', $email)->get();
             foreach($find as $found){
