@@ -77,3 +77,7 @@ table tr:hover {
     color: #fff;
     border-radius: 6px;
 }
+
+.fixed-table-body {
+    height: auto !important;
+}

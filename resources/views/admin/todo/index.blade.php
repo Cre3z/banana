@@ -2,7 +2,7 @@
 @extends('layouts.wed')
 @section('content')
 @include('partials.hamburger')
-<div class="content">
+<div class="content mt-70">
     <div class="container-fluid">
 
         <div class="row">

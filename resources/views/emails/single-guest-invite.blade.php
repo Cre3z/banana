@@ -31,13 +31,7 @@
       <tr>
         <td class="tg-yw4l info" style="padding: 20px 10px;">
             <p>Beste {{$guest->name}}</p>
-            <p>
-            @if(count($guests) == 2)
-            Julle
-            @else
-            Jy
-            @endif
-            word  hartlik  uitgenooi  na  ons  huweliksbevestiging!  Dit  sal  vir  ons  ‘n  eer  en  ‘n  voorreg  wees  as  jy  dit  saam  met  ons  kan  deel.  ‘n  Groot  dag  kan  net  meer  spesiaal  wees  met  jou  daar.  </p>
+            <p>Jy word  hartlik  uitgenooi  na  ons  huweliksbevestiging!  Dit  sal  vir  ons  ‘n  eer  en  ‘n  voorreg  wees  as  jy  dit  saam  met  ons  kan  deel.  ‘n  Groot  dag  kan  net  meer  spesiaal  wees  met  jou  daar.  </p>
             <p><strong>Datum: </strong> 15 Desember 2018</p>
             <p><strong>Tyd: </strong> 16:00 vir 16:30</p>
             <p><strong>Waar: </strong> 30  Kerkstraat,  Tulbagh,  oorkant  29  Restuarant </p>
