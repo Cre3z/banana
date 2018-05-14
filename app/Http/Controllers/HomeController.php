@@ -29,7 +29,7 @@ class HomeController extends Controller
     public function index()
     {
         $invites_sent = Guest::where('invited', true)->where('rsvp', 'no')->count();
-        $guest_total = Guest::count();
+        $guest_total = Guest::where('plus_one', '!=', 'declined')->count();
         $rsvp_invites = Guest::where('invited', true)->where('rsvp', 'yes')->count();
         $out_invites = Guest::where('invited', false)->count();
         $todo = Todo::where('public', true)->first();
