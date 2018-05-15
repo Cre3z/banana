@@ -198,7 +198,7 @@ class GuestsController extends Controller
     
     public function allJSON()
     {
-        $all = Guest::all();
+        $all = Guest::where('rsvp', '!=', 'declined')->get();
         return response()->json($all);
     }
     
